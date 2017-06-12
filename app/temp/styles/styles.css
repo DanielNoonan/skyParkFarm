@@ -455,30 +455,21 @@ template {
 
 /*box-sizing must be border box for the column calc() widths to work out and fit precisely.*/
 
+/*This has been included in the _global.css file*/
+
+/*
 * {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
+*/
 
-/*Arbitrary styles*/
+/*Demo styles to help visualise the layout*/
 
-.demo-styling {
+.demo-styles {
     background: pink;
     text-align: center;
     border: 1px solid red;
-    padding: 1rem 0;
-}
-
-.container {
-    width: calc(100% - 10rem);
-    background-color: lightblue;
-    height: 100vh;
-    margin: 0 auto;
-}
-
-h1 {
-    margin: 0 auto;
-    text-align: center;
+    padding: 80px 0;
 }
 
 /************************************/
@@ -708,24 +699,16 @@ h1 {
 
 /****************************************************************/
 
-/*Showing the news column for medium+ screens*/
-
-/*Mobile first*/
-
-.news-column {
-    display: none;
-    background-color: purple;
-}
-
-/*Then for larger screens*/
-
-@media all and (min-width: 640px) {
-    .news-column {
-        display: block;
-    }
-}
-
 /**  global  **/
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%rem;
+}
 
 body {
     font-family: 'Garamond', serif;
@@ -735,3 +718,5 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+/**************************************************************/

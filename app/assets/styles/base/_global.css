@@ -1,5 +1,13 @@
 /**  global  **/
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%rem;
+}
+
 body {
     font-family: 'Garamond', serif;
 }
@@ -8,3 +16,6 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+
+/**************************************************************/
