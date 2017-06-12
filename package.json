@@ -1,0 +1,7 @@
+{
+  "name": "sky-park-farm-git-repo",
+  "version": "1.0.0",
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  }
+}
