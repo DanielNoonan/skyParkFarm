@@ -1,7 +1,16 @@
 /**  global  **/
 
-* {
+$spfGold: #BC7817;
+$spfBlue: #80D4F7;
+$dnwBlue: #000034;
+html {
     box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 html {
