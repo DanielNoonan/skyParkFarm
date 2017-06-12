@@ -1,1 +1,4 @@
+/*Main CSS file: The recipe pointing towards the required ingredients. Ingredients that each have their own specific, focused purpose*/
 
+@import 'normalize.css';
+@import 'base/_global';
