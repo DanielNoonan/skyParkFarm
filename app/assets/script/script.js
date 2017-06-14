@@ -15,7 +15,7 @@ let levelOneArr = Array.from(document.querySelectorAll('.has-sub-menu')),
 //iterate of the array of all top tier menu items
 topTier.forEach(item => {
     //add event listeners to each of them
-    item.addEventListener('mouseenter', () => {
+    item.addEventListener('click', () => {
         //if one of the menu items that does NOT have a sub-menu is clicked then close/hide any open sub menues
         if (item.classList.contains('has-sub-menu') === false) {
             levelTwoArr.forEach(levelTwo => {
@@ -29,7 +29,7 @@ topTier.forEach(item => {
 //iterate over the array of level 1 items that have sub-menus
 levelOneArr.forEach(item => {
     //add event listeners to each of them
-    item.addEventListener('mouseenter', () => {
+    item.addEventListener('click', () => {
         //store the array index of the level 1 item clicked
         let index = levelOneArr.indexOf(item);
         //store the level 2 sub-menu that corresponds to the same array index value and the index value of the level 1 array that was clicked

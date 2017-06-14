@@ -882,7 +882,7 @@ label {
 
 /**********************/
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1023px) {
     /*Overall Container*/
     .flex-nav {
         -ms-flex-wrap: wrap;
