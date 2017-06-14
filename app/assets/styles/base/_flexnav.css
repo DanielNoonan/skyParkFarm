@@ -115,8 +115,8 @@ nav ul li {
 /*label and toggle not displaying on larger screen sizes*/
 
 label {
-    font-size: 26px;
-    width: 26px;
+    font-size: 100px;
+    width: 100px;
     margin: 10px 10px 0 0;
     color: goldenrod;
     display: none;
@@ -133,12 +133,17 @@ label {
     /*Overall Container*/
     .flex-nav {
         flex-wrap: wrap;
+        a {
+            font-size: 2rem;
+        }
     }
-    /*logo and title*/
+    /*    logo and title*/
+    /*
     .logo-div {
         flex: 1 1 100%;
         justify-content: space-around;
     }
+*/
     /*Menu*/
     .flex-nav ul {
         flex-wrap: wrap;
@@ -159,6 +164,7 @@ label {
     }
     .flex-nav .toggle-me {
         display: none;
+        height: 100vh;
     }
     #toggle:checked+.toggle-me {
         /*Needs to display Block FIRST so menu appears*/
