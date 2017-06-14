@@ -751,8 +751,8 @@ body {
 }
 
 .flex-nav a {
-        color: #bebebe;
-        font-weight: 100;
+        color: #BC7817;
+        font-weight: 700;
         font-size: 1.25rem;
         letter-spacing: 2px;
         text-decoration: none;
@@ -765,7 +765,7 @@ body {
         transition: all 0.1s;
     }
 
-.flex-nav a:hover {
+.flex-nav .flex-nav__link__animation:hover {
         color: white;
         border-top: 1px solid white;
         border-bottom: 1px solid white;
@@ -773,34 +773,35 @@ body {
         padding-bottom: 20px;
     }
 
-.logo-div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    min-width: 350px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
+.flex-nav .flex-nav__logo-div {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        min-width: 350px;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
 
-.logo {
-    padding: 0;
-    margin: 0;
-    max-width: 120px;
-    height: 100px;
-    background: transparent;
-}
+.flex-nav .flex-nav__logo-div .flex-nav__logo {
+            padding: 0;
+            margin: 0;
+            max-width: 120px;
+            height: 100px;
+            background: transparent;
+        }
 
-.logo img {
-    height: 100%;
-}
+.flex-nav .flex-nav__logo-div .flex-nav__logo img {
+                height: 100%;
+            }
 
-h1 {
-    padding-right: 20px;
-}
+.flex-nav .flex-nav__logo-div h1 {
+            padding-right: 20px;
+            color: #BC7817;
+        }
 
 /* Flex Container - menu*/
 
@@ -830,12 +831,16 @@ h1 {
     /**Need position:absolute so it extends outside the nav-bar**/
     position: absolute;
     /*    right: 0;*/
-    background: grey;
+    background: #000034;
     list-style-type: none;
     padding: 0;
-    margin-top: 12px;
+    /*    margin-top: 12px;*/
     width: 100%;
     z-index: 10;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
 }
 
 .hide-sub-menu {
@@ -866,6 +871,7 @@ nav ul li {
 label {
     font-size: 26px;
     width: 26px;
+    margin: 10px 10px 0 0;
     color: goldenrod;
     display: none;
 }
