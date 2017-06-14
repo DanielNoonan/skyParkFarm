@@ -20,10 +20,12 @@
             <!--                        <label for="toggle">&#9776;</label>-->
             <label for="toggle">&#43;</label>
             <input type="checkbox" id="toggle">
-            <ul class="toggle-me ul-level-1">
-                <li class="js-top-tier"><a href="#" class="flex-nav__link__animation">HOME</a></li>
-                <li class="js-top-tier has-sub-menu">
-                    <a href="#" class="flex-nav__link__animation">ABOUT</a>
+            <ul class="js__click-outside-to-close toggle-me ul-level-1">
+                <li class="js-top-tier">
+                    <a href="#" class="flex-nav__link__animation">HOME</a>
+                </li>
+                <li class="js-top-tier has-sub-menu" style="cursor: pointer">
+                    <a class="flex-nav__link__animation">ABOUT <i class="fa fa-caret-down" aria-hidden="true"></i></a>
                     <ul class="ul-level-2 hide-sub-menu">
                         <li><a href="#" class="flex-nav__link__animation">HISTORY</a></li>
                         <li><a href="#" class="flex-nav__link__animation">TODAY</a></li>
@@ -31,8 +33,8 @@
                         <li><a href="#" class="flex-nav__link__animation">THE FUTURE</a></li>
                     </ul>
                 </li>
-                <li class="js-top-tier has-sub-menu">
-                    <a href="#" class="flex-nav__link__animation">NEWS</a>
+                <li class="js-top-tier has-sub-menu" style="cursor: pointer">
+                    <a class="flex-nav__link__animation">NEWS <i class="fa fa-caret-down" aria-hidden="true"></i></a>
                     <ul class="ul-level-2 hide-sub-menu">
                         <li><a href="#" class="flex-nav__link__animation">LATEST</a></li>
                         <li><a href="#" class="flex-nav__link__animation">PRESS COVERAGE</a></li>
@@ -52,6 +54,9 @@
             </ul>
         </nav>
     </div>
+    <div class="container">
+    </div>
+
     <script src="assets/script/script.js"></script>
 </body>
 

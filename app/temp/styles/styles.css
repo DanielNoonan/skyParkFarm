@@ -726,6 +726,11 @@ img {
     height: auto;
 }
 
+.container {
+    height: 100vh;
+    border: 5px solid black;
+}
+
 /**************************************************************/
 
 /*
@@ -752,7 +757,8 @@ body {
             align-items: center;
 }
 
-.flex-nav a {
+.flex-nav a,
+    .flex-nav p {
         color: #BC7817;
         font-weight: 700;
         font-size: 1.25rem;

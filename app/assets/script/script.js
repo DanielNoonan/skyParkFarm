@@ -18,12 +18,16 @@ topTier.forEach(item => {
     item.addEventListener('click', () => {
         //if one of the menu items that does NOT have a sub-menu is clicked then close/hide any open sub menues
         if (item.classList.contains('has-sub-menu') === false) {
-            levelTwoArr.forEach(levelTwo => {
-                levelTwo.classList.add('hide-sub-menu');
-            });
+            closeSubMenus();
         }
     });
 });
+
+const closeSubMenus = () => {
+    levelTwoArr.forEach(levelTwo => {
+        levelTwo.classList.add('hide-sub-menu');
+    });
+}
 
 ////////////////
 //iterate over the array of level 1 items that have sub-menus
@@ -44,3 +48,15 @@ levelOneArr.forEach(item => {
         subMenu.classList.toggle('hide-sub-menu');
     })
 })
+
+
+////////////////
+//Closes any open sub-menus if anywhere outside of the nav menu list is clicked
+let flexNavUnorderedList = document.querySelector('.js__click-outside-to-close');
+
+document.addEventListener('click', function (event) {
+    let isClickInside = flexNavUnorderedList.contains(event.target);
+    if (!isClickInside) {
+        closeSubMenus();
+    }
+});

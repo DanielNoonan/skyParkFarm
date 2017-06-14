@@ -17,7 +17,8 @@ body {
     justify-content: space-around;
     background: $dnwBlue;
     align-items: center;
-    a {
+    a,
+    p {
         color: $spfGold;
         font-weight: 700;
         font-size: 1.25rem;
