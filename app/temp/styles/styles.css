@@ -744,10 +744,12 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     background: #000034;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .flex-nav a {
@@ -773,35 +775,34 @@ body {
         padding-bottom: 20px;
     }
 
+.flex-nav h1 {
+        /*        padding-right: 20px;*/
+        font-size: 2rem;
+        /*            padding-top: 10%;*/
+        text-align: center;
+        color: #BC7817;
+    }
+
 .flex-nav .flex-nav__logo-div {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        min-width: 350px;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
     }
 
 .flex-nav .flex-nav__logo-div .flex-nav__logo {
             padding: 0;
-            margin: 0;
-            max-width: 120px;
-            height: 100px;
+            margin: 5px 0;
+            height: 130px;
             background: transparent;
         }
 
 .flex-nav .flex-nav__logo-div .flex-nav__logo img {
                 height: 100%;
+                min-width: 130px;
             }
-
-.flex-nav .flex-nav__logo-div h1 {
-            padding-right: 20px;
-            color: #BC7817;
-        }
 
 /* Flex Container - menu*/
 
@@ -842,6 +843,10 @@ body {
     border-bottom: 1px solid white;
     border-left: 1px solid white;
 }
+
+.ul-level-2 a {
+        color: silver;
+    }
 
 .hide-sub-menu {
     display: none;
@@ -889,7 +894,7 @@ label {
             flex-wrap: wrap;
     }
         .flex-nav a {
-            font-size: 2rem;
+            font-size: 4rem;
         }
     /*    logo and title*/
     /*
@@ -923,7 +928,6 @@ label {
     }
     .flex-nav .toggle-me {
         display: none;
-        height: 100vh;
     }
     #toggle:checked+.toggle-me {
         /*Needs to display Block FIRST so menu appears*/
@@ -936,18 +940,15 @@ label {
     /****************/
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
     .flex-nav li {
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
     }
 }
 
-@media all and (max-width: 370px) {
-    .logo-div {
-        min-width: 200px;
-    }
-    .logo-div h1 {
-        display: none;
-    }
+@media all and (max-width: 480px) {
+        .flex-nav h1 {
+            display: none;
+        }
 }

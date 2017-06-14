@@ -14,8 +14,9 @@ body {
 
 .flex-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background: $dnwBlue;
+    align-items: center;
     a {
         color: $spfGold;
         font-weight: 700;
@@ -36,24 +37,25 @@ body {
         padding-top: 20px;
         padding-bottom: 20px;
     }
+    h1 {
+        /*        padding-right: 20px;*/
+        font-size: 2rem;
+        /*            padding-top: 10%;*/
+        text-align: center;
+        color: $spfGold;
+    }
     .flex-nav__logo-div {
         display: flex;
-        min-width: 350px;
         justify-content: space-between;
-        align-items: center;
         .flex-nav__logo {
             padding: 0;
-            margin: 0;
-            max-width: 120px;
-            height: 100px;
+            margin: 5px 0;
+            height: 130px;
             background: transparent;
             img {
                 height: 100%;
+                min-width: 130px;
             }
-        }
-        h1 {
-            padding-right: 20px;
-            color: $spfGold;
         }
     }
 }
@@ -89,6 +91,9 @@ body {
     border-right: 1px solid white;
     border-bottom: 1px solid white;
     border-left: 1px solid white;
+    a {
+        color: silver;
+    }
 }
 
 .hide-sub-menu {
@@ -134,7 +139,7 @@ label {
     .flex-nav {
         flex-wrap: wrap;
         a {
-            font-size: 2rem;
+            font-size: 4rem;
         }
     }
     /*    logo and title*/
@@ -164,7 +169,6 @@ label {
     }
     .flex-nav .toggle-me {
         display: none;
-        height: 100vh;
     }
     #toggle:checked+.toggle-me {
         /*Needs to display Block FIRST so menu appears*/
@@ -175,17 +179,16 @@ label {
     /****************/
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
     .flex-nav li {
         flex-basis: 100%;
     }
 }
 
-@media all and (max-width: 370px) {
-    .logo-div {
-        min-width: 200px;
-    }
-    .logo-div h1 {
-        display: none;
+@media all and (max-width: 480px) {
+    .flex-nav {
+        h1 {
+            display: none;
+        }
     }
 }
