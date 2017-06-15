@@ -958,3 +958,28 @@ label {
             display: none;
         }
 }
+
+.large-hero {
+    display: none;
+    position: relative;
+}
+
+.large-hero__text-box {
+        position: absolute;
+        top: 10%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        width: 100%;
+    }
+
+.large-hero__title {
+        color: white;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.9);
+        text-align: center;
+    }
+
+@media all and (min-width: 1024px) {
+    .large-hero {
+        display: block;
+    }
+}
