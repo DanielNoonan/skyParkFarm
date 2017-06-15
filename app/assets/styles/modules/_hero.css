@@ -3,7 +3,7 @@
     position: relative;
     &__text-box {
         position: absolute;
-        top: 10%;
+        top: 15%;
         transform: translateY(-50%);
         width: 100%;
     }
