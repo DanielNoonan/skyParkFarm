@@ -1,0 +1,30 @@
+.button-box {
+    height: 200px;
+    border: 5px solid black;
+    align-items: center;
+    justify-content: space-around;
+    &__btn {
+        font-size: 1.5rem;
+        padding: 15px;
+        background: $dnwBlue;
+        border-radius: 10px;
+        color: white;
+        text-decoration: none;
+    }
+    p {
+        font-size: 1.5rem;
+        color: $dnwBlue;
+    }
+}
+
+.flex-nav__title__nav-bar-three {
+    h1 {
+        color: #80D2F6;
+    }
+}
+
+.blue-links-nav {
+    a {
+        color: $spfBlue;
+    }
+}
