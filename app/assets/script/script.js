@@ -1,1 +1,1 @@
-require('./app/assets/script/js-blocks/navBar');
+require('./app/assets/script/js-blocks/_navBar');
