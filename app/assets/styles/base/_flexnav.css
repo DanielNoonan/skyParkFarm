@@ -23,6 +23,7 @@ body {
     align-items: center;
     a,
     p {
+        background: $dnwBlue;
         color: $spfGold;
         font-weight: 700;
         font-size: 1.25rem;
@@ -201,6 +202,7 @@ label {
         flex-wrap: wrap;
         a {
             font-size: 4rem;
+            border-radius: 0%;
         }
     }
     /*    logo and title*/

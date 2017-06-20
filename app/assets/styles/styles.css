@@ -5,4 +5,7 @@
 @import 'base/_global';
 @import 'base/_flexnav';
 @import 'modules/_hero';
+@import 'modules/_news-column';
+@import 'modules/_page-title';
+@import 'modules/_page-section';
 @import 'modules/_temp-buttons';

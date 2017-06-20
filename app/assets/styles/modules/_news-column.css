@@ -1,0 +1,12 @@
+.news-column {
+    height: 1000px;
+    &__flex-container {
+        height: 100%;
+        &__item {
+            text-align: center;
+            height: 25%;
+            background: #dadaaa;
+            border: 1px solid black;
+        }
+    }
+}
