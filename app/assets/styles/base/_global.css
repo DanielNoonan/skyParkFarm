@@ -1,8 +1,11 @@
-/**  global  **/
+/**  Variables  **/
 
 $spfGold: #BC7817;
 $spfBlue: #80D4F7;
 $dnwBlue: #000034;
+
+/**  Global Styles  **/
+
 html {
     box-sizing: border-box;
 }

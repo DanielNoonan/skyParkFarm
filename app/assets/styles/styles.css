@@ -4,6 +4,7 @@
 @import 'base/_flexgrid';
 @import 'base/_global';
 @import 'base/_flexnav';
+@import 'base/_mixins';
 @import 'modules/_hero';
 @import 'modules/_news-column';
 @import 'modules/_page-title';
