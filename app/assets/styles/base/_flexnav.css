@@ -62,6 +62,21 @@ body {
 }
 
 
+/**********************************************************************/
+
+
+/**Fixing the Title being too large within this specific screen size**/
+
+@media all and (min-width: 1024px) and (max-width: 1080px) {
+    .flex-nav h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/**********************************************************************/
+
+
 /* Flex Container - menu*/
 
 .ul-level-1 {
@@ -100,6 +115,32 @@ body {
 .hide-sub-menu {
     display: none;
 }
+
+
+/*******************************************************/
+
+
+/* Creates On-hover Dropdown Sub-menus for desktop view*/
+
+
+/*******************************************************/
+
+
+/**Using the Adjancent Sibling Combinator selector '+' **/
+
+/*
+@media all and (min-width: 1024px) {
+    .flex-nav__link__animation:hover+ul {
+        display: block;
+    }
+    .flex-nav ul:hover {
+        display: flex;
+    }
+}
+*/
+
+
+/********************************************************/
 
 nav ul li {
     /**Need position:relative so can make ul-level-2 position absolute**/
