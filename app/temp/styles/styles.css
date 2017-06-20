@@ -728,6 +728,12 @@ img {
 
 /**************************************************************/
 
+.scroller {
+    width: 50px;
+    height: 5000px;
+    background: lightblue;
+}
+
 /*
 body {
     font-family: sans-serif;
@@ -737,6 +743,10 @@ body {
 */
 
 /****************/
+
+.flex-nav-wrapper {
+    height: 140px;
+}
 
 /*Flex Container - Main*/
 
@@ -809,7 +819,7 @@ body {
 
 /**Fixing the Title being too large within this specific screen size**/
 
-@media all and (min-width: 1024px) and (max-width: 1080px) {
+@media all and (min-width: 1024px) and (max-width: 1090px) {
     .flex-nav h1 {
         font-size: 2rem;
     }
@@ -923,6 +933,18 @@ label {
 
 /**********************/
 
+/**fixed nav bar 1024px and above**/
+
+@media all and (min-width:1024px) {
+    .flex-nav {
+        z-index: 999;
+        width: 100%;
+        position: fixed;
+    }
+}
+
+/*********************************/
+
 @media all and (max-width: 1023px) {
     /*Overall Container*/
     .flex-nav {
@@ -983,7 +1005,7 @@ label {
     }
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 640px) {
         .flex-nav h1 {
             display: none;
         }
@@ -996,9 +1018,7 @@ label {
 
 .large-hero__text-box {
         position: absolute;
-        top: 15%;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
+        top: 18px;
         width: 100%;
     }
 

@@ -28,3 +28,9 @@ img {
 
 
 /**************************************************************/
+
+.scroller {
+    width: 50px;
+    height: 5000px;
+    background: lightblue;
+}
