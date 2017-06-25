@@ -699,7 +699,9 @@ template {
 
 /****************************************************************/
 
-/**  global  **/
+/**  Variables  **/
+
+/**  Global Styles  **/
 
 html {
     -webkit-box-sizing: border-box;
@@ -1006,6 +1008,29 @@ label {
             display: none;
         }
 }
+
+/*To use a mixin: have the .class inside the mixin OR have the mixin inside the .class*/
+
+/*
+@mixin atSmall {
+    .className {
+        color: red;
+    }
+}
+*/
+
+/*If you use the mixin inside a selector then it will apply to that selector:*/
+
+/*
+.title {
+    color: red;
+    font-size: 2rem;
+
+    @mixin atSmall {
+        color: blue;
+    }
+
+}*/
 
 .large-hero {
     display: none;
