@@ -1,12 +1,24 @@
 .news-column {
-    height: 1000px;
+    display: none;
+    text-align: center;
+    &__text-box {
+        background: #f6f6f6;
+        border: 2px solid #E6E6E6;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
     &__flex-container {
+        border: 2px solid #E6E6E6;
         height: 100%;
         &__item {
+            background-color: #F6F6F6;
             text-align: center;
             height: 25%;
-            background: #dadaaa;
-            border: 1px solid black;
         }
     }
+    /*
+    @mixin atLarge {
+        display: block;
+    }
+*/
 }

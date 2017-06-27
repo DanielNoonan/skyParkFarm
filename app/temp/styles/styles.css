@@ -1046,7 +1046,7 @@ label {
 .large-hero__title {
         font-size: 2rem;
         color: white;
-        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.9);
+        text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.9);
         text-align: center;
     }
 
@@ -1057,42 +1057,113 @@ label {
 }
 
 .news-column {
-    height: 1000px;
+    display: none;
+    text-align: center;
+    /*
+    @mixin atLarge {
+        display: block;
+    }
+*/
 }
 
+.news-column__text-box {
+        background: #f6f6f6;
+        border: 2px solid #E6E6E6;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
 .news-column__flex-container {
+        border: 2px solid #E6E6E6;
         height: 100%;
     }
 
 .news-column__flex-container__item {
+            background-color: #F6F6F6;
             text-align: center;
             height: 25%;
-            background: #dadaaa;
-            border: 1px solid black;
         }
 
 .page-title {
-    height: 150px;
     text-align: center;
-    border: 1px solid black;
-    background: #dadaff;
 }
 
-.page-section {
-    border: 1px solid black;
+.page-title__text-box {
+        background: #f6f6f6;
+        border: 2px solid #E6E6E6;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+/*Uncomment the .full-page-row mixin styles when the News Column is included. It just gives everything suitable margins from the the edge of the screen*/
+
+.full-page-row {
+    padding-left: 1%;
+    padding-right: 1%;
+    /*
+    @mixin atLarge {
+        padding-left: 3%;
+        padding-right: 0;
+    }
+*/
 }
 
-.page-section__flex-row {
+.page-content__outer-row {
         -ms-flex-pack: distribute;
             justify-content: space-around;
     }
 
-.page-section__flex-row__content {
-            background: #ffdada;
-            text-align: center;
-            height: 330px;
-            border: 1px solid black;
+.page-content__column-left {
+        background-color: #F6F6F6;
+    }
+
+@media (min-width: 1024px) {
+
+.page-content__column-left {
+            border: 2px solid #E6E6E6
+    }
+    }
+
+.page-content__column-right {
+        background-color: #F6F6F6;
+    }
+
+@media (min-width: 1024px) {
+
+.page-content__column-right {
+            border: 2px solid #E6E6E6
+    }
+    }
+
+.page-content__content-box {
+        font-size: 1.25rem;
+        text-align: justify;
+        background-color: #F6F6F6;
+        padding: 0 10% 0 10%;
+    }
+
+@media (min-width: 1024px) {
+
+.page-content__content-box {
+            padding: 0 2% 0 2%
+    }
+    }
+
+.page-content__content-box__top {
+            padding-top: 20px;
         }
+
+.page-content img {
+        border-radius: 2%;
+    }
+
+.page-content__heading {
+        text-align: center;
+    }
+
+.page-content__dom-pic {
+        width: 90%;
+    }
 
 .button-box {
     height: 200px;
