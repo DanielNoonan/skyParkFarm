@@ -1154,7 +1154,9 @@ label {
         }
 
 .page-content img {
-        border-radius: 2%;
+        border-radius: 3%;
+        display: block;
+        margin: 0 auto;
     }
 
 .page-content__heading {
