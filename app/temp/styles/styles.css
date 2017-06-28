@@ -569,7 +569,7 @@ template {
 
 /*  Classes For Medium Sized Screens  */
 
-@media all and (min-width: 640px) {
+@media all and (min-width: 800px) {
     .medium-12 {
         -webkit-box-flex: 0;
             -ms-flex: 0 0 100%;
@@ -1180,6 +1180,7 @@ label {
     margin-left: 1%;
     margin-right: 1%;
 */
+    margin-top: 10px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     background: #F6F6F6;
