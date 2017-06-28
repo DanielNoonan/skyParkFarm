@@ -1,6 +1,7 @@
 .news-column {
     display: none;
     text-align: center;
+    height: 100vh;
     &__text-box {
         background: $backGrey;
         border: 2px solid $borderGrey;

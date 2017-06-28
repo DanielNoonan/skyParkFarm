@@ -1,13 +1,3 @@
-/**  Variables  **/
-
-$spfGold: #BC7817;
-$spfBlue: #80D4F7;
-$dnwBlue: #000034;
-$backGrey: #F6F6F6;
-$borderGrey: #E6E6E6;
-
-/**  Global Styles  **/
-
 html {
     box-sizing: border-box;
 }
@@ -38,6 +28,3 @@ a {
 a:hover {
     color: black;
 }
-
-
-/**************************************************************/

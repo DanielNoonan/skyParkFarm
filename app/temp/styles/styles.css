@@ -1067,6 +1067,7 @@ label {
 .news-column {
     display: none;
     text-align: center;
+    height: 100vh;
     /*
     @mixin atLarge {
         display: block;
