@@ -16,21 +16,21 @@
         justify-content: space-around;
     }
     &__column-left {
-        background-color: #F6F6F6;
+        background-color: $backGrey;
         @mixin atLarge {
-            border: 2px solid #E6E6E6;
+            border: 2px solid $borderGrey;
         }
     }
     &__column-right {
-        background-color: #F6F6F6;
+        background-color: $backGrey;
         @mixin atLarge {
-            border: 2px solid #E6E6E6;
+            border: 2px solid $borderGrey;
         }
     }
     &__content-box {
         font-size: 1.25rem;
         text-align: justify;
-        background-color: #F6F6F6;
+        background-color: $backGrey;
         padding: 0 10% 0 10%;
         @mixin atLarge {
             padding: 0 2% 0 2%;

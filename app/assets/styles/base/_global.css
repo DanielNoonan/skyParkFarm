@@ -3,6 +3,8 @@
 $spfGold: #BC7817;
 $spfBlue: #80D4F7;
 $dnwBlue: #000034;
+$backGrey: #F6F6F6;
+$borderGrey: #E6E6E6;
 
 /**  Global Styles  **/
 
@@ -27,6 +29,14 @@ body {
 img {
     max-width: 100%;
     height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
 }
 
 

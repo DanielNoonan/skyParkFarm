@@ -2,16 +2,16 @@
     display: none;
     text-align: center;
     &__text-box {
-        background: #f6f6f6;
-        border: 2px solid #E6E6E6;
+        background: $backGrey;
+        border: 2px solid $borderGrey;
         margin-top: 5px;
         margin-bottom: 10px;
     }
     &__flex-container {
-        border: 2px solid #E6E6E6;
+        border: 2px solid $borderGrey;
         height: 100%;
         &__item {
-            background-color: #F6F6F6;
+            background-color: $backGrey;
             text-align: center;
             height: 25%;
         }

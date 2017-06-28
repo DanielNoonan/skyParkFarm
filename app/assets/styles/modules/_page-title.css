@@ -1,8 +1,8 @@
 .page-title {
     text-align: center;
     &__text-box {
-        background: #f6f6f6;
-        border: 2px solid #E6E6E6;
+        background: $backGrey;
+        border: 2px solid $borderGrey;
         margin-top: 5px;
         margin-bottom: 10px;
     }
