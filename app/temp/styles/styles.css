@@ -451,6 +451,29 @@ template {
   display: none;
 }
 
+/*To use a mixin: have the .class inside the mixin OR have the mixin inside the .class*/
+
+/*
+@mixin atSmall {
+    .className {
+        color: red;
+    }
+}
+*/
+
+/*If you use the mixin inside a selector then it will apply to that selector:*/
+
+/*
+.title {
+    color: red;
+    font-size: 2rem;
+
+    @mixin atSmall {
+        color: blue;
+    }
+
+}*/
+
 /***  flexgrid  */
 
 /*box-sizing must be border box for the column calc() widths to work out and fit precisely.*/
@@ -699,10 +722,6 @@ template {
 
 /****************************************************************/
 
-/**  Variables  **/
-
-/**  Global Styles  **/
-
 html {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -735,8 +754,6 @@ a {
 a:hover {
     color: black;
 }
-
-/**************************************************************/
 
 /*
 body {
@@ -1016,29 +1033,6 @@ label {
             display: none;
         }
 }
-
-/*To use a mixin: have the .class inside the mixin OR have the mixin inside the .class*/
-
-/*
-@mixin atSmall {
-    .className {
-        color: red;
-    }
-}
-*/
-
-/*If you use the mixin inside a selector then it will apply to that selector:*/
-
-/*
-.title {
-    color: red;
-    font-size: 2rem;
-
-    @mixin atSmall {
-        color: blue;
-    }
-
-}*/
 
 .large-hero {
     display: none;
