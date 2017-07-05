@@ -21,12 +21,11 @@ body {
     justify-content: space-around;
     background: $dnwBlue;
     align-items: center;
-    a,
-    p {
+    &__link {
         background: $dnwBlue;
         color: $spfGold;
         font-weight: 700;
-        font-size: 1.25rem;
+        font-size: 1.6rem;
         letter-spacing: 2px;
         text-decoration: none;
         padding: 30px 5px;
@@ -36,33 +35,33 @@ body {
         text-align: center;
         transition: all 0.1s;
     }
-    .flex-nav__link__animation:hover {
+    &__link:hover {
         color: white;
         border-top: 1px solid white;
         border-bottom: 1px solid white;
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    h1 {
+    &__brand-div {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        padding: 0;
+        margin: 5px 0;
+        height: 130px;
+        background: transparent;
+        img {
+            height: 100%;
+            min-width: 130px;
+        }
+    }
+    &__title {
         /*        padding-right: 20px;*/
         font-size: 3rem;
         /*            padding-top: 10%;*/
-        text-align: center;
+        /*        text-align: center;*/
         color: $spfGold;
-    }
-    .flex-nav__logo-div {
-        display: flex;
-        justify-content: space-between;
-        .flex-nav__logo {
-            padding: 0;
-            margin: 5px 0;
-            height: 130px;
-            background: transparent;
-            img {
-                height: 100%;
-                min-width: 130px;
-            }
-        }
     }
 }
 
@@ -134,7 +133,7 @@ body {
 /**Using the Adjancent Sibling Combinator selector '+' **/
 
 @media all and (min-width: 1024px) {
-    .flex-nav__link__animation:hover+ul {
+    .flex-nav__link:hover+ul {
         display: block;
     }
     .flex-nav ul:hover {

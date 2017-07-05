@@ -12,7 +12,7 @@ let levelOneArr = Array.from(document.querySelectorAll('.has-sub-menu')),
     topTier = Array.from(document.querySelectorAll('.js-top-tier'));
 
 ////////////////
-//iterate of the array of all top tier menu items
+//iterate over the array of all top tier menu items
 topTier.forEach(item => {
     //add event listeners to each of them
     item.addEventListener('click', () => {

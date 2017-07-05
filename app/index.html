@@ -12,11 +12,11 @@
     <!--    Nav-bar-->
     <div class="flex-nav-wrapper">
         <nav class="flex-nav">
-            <div class="flex-nav__logo-div">
-                <a href="#" class="flex-nav__logo"><img src="assets/images/spf-logo-navy-text.png"></a>
-            </div>
-            <div class="flex-nav__title">
-                <h1>SKY PARK FARM</h1>
+            <div class="flex-nav__brand-div">
+                <a href="#" class="flex-nav__logo">
+                    <img src="assets/images/spf-logo-navy-text.png">
+                </a>
+                <h1 class="flex-nav__title">SKY PARK FARM</h1>
             </div>
             <!--The LABEL is set so that it will effect the element with ID toggle - in this case a checkbox. So clicking this LABEL will activate that CHECKBOX-->
             <!--                        <label for="toggle">&#9776;</label>-->
@@ -24,34 +24,36 @@
             <input type="checkbox" id="toggle">
             <ul class="js__click-outside-to-close toggle-me ul-level-1">
                 <li class="js-top-tier">
-                    <a href="#" class="flex-nav__link__animation">HOME</a>
+                    <a href="#" class="flex-nav__link">HOME</a>
                 </li>
                 <li onmouseleave="closeSubMenus()" class="js-top-tier has-sub-menu" style="cursor: pointer">
-                    <a class="flex-nav__link__animation">ABOUT <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                    <a class="flex-nav__link">ABOUT <i class="fa fa-caret-down" aria-hidden="true"></i></a>
                     <ul class="ul-level-2 hide-sub-menu" onmouseleave="closeSubMenus()">
-                        <li><a href="#" class="flex-nav__link__animation">HISTORY</a></li>
-                        <li><a href="#" class="flex-nav__link__animation">TODAY</a></li>
-                        <li><a href="#" class="flex-nav__link__animation">THEN &amp; NOW</a></li>
-                        <li><a href="#" class="flex-nav__link__animation">THE FUTURE</a></li>
+                        <li><a href="#" class="flex-nav__link">HISTORY</a></li>
+                        <li><a href="#" class="flex-nav__link">TODAY</a></li>
+                        <li><a href="#" class="flex-nav__link">THEN &amp; NOW</a></li>
+                        <li><a href="#" class="flex-nav__link">THE FUTURE</a></li>
                     </ul>
                 </li>
                 <li onmouseleave="closeSubMenus()" class="js-top-tier has-sub-menu" style="cursor: pointer">
-                    <a class="flex-nav__link__animation">NEWS <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                    <a class="flex-nav__link">NEWS <i class="fa fa-caret-down" aria-hidden="true"></i></a>
                     <ul class="ul-level-2 hide-sub-menu">
-                        <li><a href="#" class="flex-nav__link__animation">LATEST</a></li>
-                        <li><a href="#" class="flex-nav__link__animation">PRESS COVERAGE</a></li>
+                        <li><a href="#" class="flex-nav__link">LATEST</a></li>
+                        <li><a href="#" class="flex-nav__link">PRESS COVERAGE</a></li>
                     </ul>
                 </li>
-                <li class="js-top-tier"><a href="#" class="flex-nav__link__animation">IMAGES</a></li>
-                <li class="js-top-tier"><a href="#" class="flex-nav__link__animation">CONTACT</a></li>
+                <li class="js-top-tier"><a href="#" class="flex-nav__link">THE TEAM <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+                <li class="js-top-tier"><a href="#" class="flex-nav__link">DEER FARM <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+                <li class="js-top-tier"><a href="#" class="flex-nav__link">ACCOMODATION <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+                <li class="js-top-tier"><a href="#" class="flex-nav__link">CONTACT <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
                 <li class="social">
-                    <a href="https://twitter.com" class="flex-nav__link__animation"><i class="fa fa-twitter"></i></a>
+                    <a href="https://twitter.com" class="flex-nav__link"><i class="fa fa-twitter"></i></a>
                 </li>
                 <li class="social">
-                    <a href="https://www.facebook.com/" class="flex-nav__link__animation"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/" class="flex-nav__link"><i class="fa fa-facebook"></i></a>
                 </li>
                 <li class="social">
-                    <a href="https://www.instagram.com" class="flex-nav__link__animation"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.instagram.com" class="flex-nav__link"><i class="fa fa-instagram"></i></a>
                 </li>
             </ul>
         </nav>
