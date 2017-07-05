@@ -5,9 +5,9 @@
 
 //Variables:
 //create array of level 1 menu items that have sub-menus
-let levelOneArr = Array.from(document.querySelectorAll('.has-sub-menu')),
+let levelOneArr = Array.from(document.querySelectorAll('.flex-nav__has-sub-menu')),
     //create array of level 2 sub-menus
-    levelTwoArr = Array.from(document.querySelectorAll('.ul-level-2')),
+    levelTwoArr = Array.from(document.querySelectorAll('.flex-nav__ul-level-2')),
     //create array of all top tier menu items
     topTier = Array.from(document.querySelectorAll('.js-top-tier'));
 
@@ -17,7 +17,7 @@ topTier.forEach(item => {
     //add event listeners to each of them
     item.addEventListener('click', () => {
         //if one of the menu items that does NOT have a sub-menu is clicked then close/hide any open sub menues
-        if (item.classList.contains('has-sub-menu') === false) {
+        if (item.classList.contains('flex-nav__has-sub-menu') === false) {
             closeSubMenus();
         }
     });
@@ -25,7 +25,7 @@ topTier.forEach(item => {
 
 const closeSubMenus = () => {
     levelTwoArr.forEach(levelTwo => {
-        levelTwo.classList.add('hide-sub-menu');
+        levelTwo.classList.add('js-hide-sub-menu');
     });
 }
 
@@ -40,12 +40,12 @@ levelOneArr.forEach(item => {
         let subMenu = levelTwoArr[index];
         //iterate over the level 2 sub-menu array and close any that are open - before the next step of openning the one clicked
         levelTwoArr.forEach(item => {
-            if (item.classList.contains('hide-sub-menu') === false && levelTwoArr.indexOf(item) != index) {
-                item.classList.add('hide-sub-menu');
+            if (item.classList.contains('js-hide-sub-menu') === false && levelTwoArr.indexOf(item) != index) {
+                item.classList.add('js-hide-sub-menu');
             }
         });
         //open/reveal the level 2 sub-menu
-        subMenu.classList.toggle('hide-sub-menu');
+        subMenu.classList.toggle('js-hide-sub-menu');
     })
 })
 

@@ -1,13 +1,4 @@
-/*
-body {
-    font-family: sans-serif;
-    margin: 0;
-    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
-}
-*/
-
-
-/****************/
+/*NOTE: need to include -- onmouseleave="closeSubMenus()" -- in the Top Tier (.flex-nav__has-sub-menu) <li> for that sub-menu, so that even if you click to open it, the sub-menu will still close when the mouse leaves*/
 
 .flex-nav-wrapper {
     height: 140px;
@@ -17,6 +8,7 @@ body {
 /*Flex Container - Main*/
 
 .flex-nav {
+    z-index: 999;
     display: flex;
     justify-content: space-around;
     background: $dnwBlue;
@@ -45,6 +37,7 @@ body {
     &__brand-div {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     &__logo {
         padding: 0;
@@ -58,79 +51,64 @@ body {
     }
     &__title {
         /*        padding-right: 20px;*/
-        font-size: 3rem;
+        font-size: 3.5rem;
         /*            padding-top: 10%;*/
         /*        text-align: center;*/
         color: $spfGold;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
     }
+    &__ul-level-1 {
+        z-index: 999;
+        flex: 2;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 1000px;
+        align-items: center;
+        background: $dnwBlue;
+    }
+    &__has-sub-menu {
+        /*    *Need position:relative so can make ul-level-2 position absolute**/
+        position: relative;
+    }
+    &__ul-level-2 {
+        display: flex;
+        flex-direction: column;
+        /**Need position:absolute so it extends outside the nav-bar**/
+        position: absolute;
+        /*    right: 0;*/
+        background: $dnwBlue;
+        list-style-type: none;
+        padding: 0;
+        /*    margin-top: 12px;*/
+        min-width: 100%;
+        z-index: 10;
+        border: 1px solid white;
+        a {
+            color: silver;
+        }
+    }
+}
+
+
+/*Nav Bar Link Spacing*/
+
+.flex-nav li {
+    flex: 5;
+}
+
+.flex-nav .social {
+    flex: 1;
 }
 
 
 /**********************************************************************/
 
 
-/**Fixing the Title being too large within this specific screen size**/
-
-@media all and (min-width: 1024px) and (max-width: 1090px) {
-    .flex-nav h1 {
-        font-size: 2rem;
-    }
-}
-
-
-/**********************************************************************/
-
-
-/* Flex Container - menu*/
-
-.ul-level-1 {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    width: 1000px;
-    align-items: center;
-}
-
-
-/*UL level 2 multi level menu*/
-
-.ul-level-2 {
-    display: flex;
-    flex-direction: column;
-    /**Need position:absolute so it extends outside the nav-bar**/
-    position: absolute;
-    /*    right: 0;*/
-    background: $dnwBlue;
-    list-style-type: none;
-    padding: 0;
-    /*    margin-top: 12px;*/
-    width: 100%;
-    z-index: 10;
-    border-top: 1px solid white;
-    border-right: 1px solid white;
-    border-bottom: 1px solid white;
-    border-left: 1px solid white;
-    a {
-        color: silver;
-    }
-}
-
-.hide-sub-menu {
-    display: none;
-}
-
-
-/*******************************************************/
-
-
-/* Creates On-hover Dropdown Sub-menus for desktop view*/
-
-
-/*******************************************************/
-
-
-/**Using the Adjancent Sibling Combinator selector '+' **/
+/* Creates On-hover Dropdown Sub-menus for desktop view.
+Using the Adjancent Sibling Combinator selector '+' */
 
 @media all and (min-width: 1024px) {
     .flex-nav__link:hover+ul {
@@ -142,29 +120,10 @@ body {
 }
 
 
-/*need to include onmouseleave="closeSubMenus()" in the Top Tier (.has-sub-menu) li for that sub-menu, so that even if you click to open it, the sub-menu will still close when the mouse leaves*/
+/**********************************************************************/
 
 
-/********************************************************/
-
-nav ul li {
-    /**Need position:relative so can make ul-level-2 position absolute**/
-    position: relative;
-}
-
-
-/**************************/
-
-.flex-nav li {
-    flex: 3;
-}
-
-.flex-nav .social {
-    flex: 1;
-}
-
-
-/*label and toggle not displaying on larger screen sizes*/
+/*label styles and #toggle not displaying on larger screen sizes*/
 
 label {
     font-size: 100px;
@@ -179,57 +138,68 @@ label {
 }
 
 
-/**********************/
+/**********************************************************************/
 
 
-/**fixed nav bar 1024px and above**/
+/**javaScript Adds & Removes this class to turn submenues ON/OFF**/
+
+.js-hide-sub-menu {
+    display: none;
+}
+
+
+/**********************************************************************/
+
+
+/**Makes navbar fixed position for larger screens**/
 
 @media all and (min-width:1024px) {
     .flex-nav {
-        z-index: 999;
+        /*        z-index: 999;*/
         width: 100%;
         position: fixed;
     }
 }
 
 
-/*********************************/
+/**********************************************************************/
+
+
+/*Responsive Changes For Smaller Screen Sizes*/
 
 @media all and (max-width: 1023px) {
-    /*Overall Container*/
     .flex-nav {
         flex-wrap: wrap;
+        &__brand-div {
+            display: flex;
+            justify-content: space-around;
+            flex-basis: 100%;
+        }
+        &__ul-level-1 {
+            flex-wrap: wrap;
+        }
         a {
             font-size: 2.5rem;
             border-radius: 0%;
         }
+        &__link:hover {
+            color: white;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        li {
+            flex: 1 1 100%;
+        }
     }
-    /*    logo and title*/
-    /*
-    .logo-div {
-        flex: 1 1 100%;
-        justify-content: space-around;
-    }
-*/
-    /*Menu*/
-    .flex-nav ul {
-        flex-wrap: wrap;
-    }
-    .flex-nav li {
-        flex: 1 1 100%;
-    }
-    .flex-nav .social {
-        flex: 1 1 25%;
-    }
-    .ul-level-2 {
-        position: absolute;
-    }
+    /********************************/
     /*Hamburger Toggle Functionality*/
     label {
         display: block;
         cursor: pointer;
     }
-    .flex-nav .toggle-me {
+    .toggle-me {
         display: none;
     }
     #toggle:checked+.toggle-me {
@@ -238,18 +208,29 @@ label {
         /*THEN display flex so all the flex rules apply*/
         display: flex;
     }
-    /****************/
 }
 
-@media all and (max-width: 600px) {
-    .flex-nav li {
-        flex-basis: 100%;
+
+/**Reducing the Title font size within this specific screen size range**/
+
+
+/*
+@media all and (min-width: 1024px) and (max-width: 1130px) {
+    .flex-nav {
+        &__title {
+            margin: 0;
+            font-size: 2rem;
+        }
     }
 }
+*/
+
+
+/*Hide Title On Very Small Screens*/
 
 @media all and (max-width: 640px) {
     .flex-nav {
-        h1 {
+        &__title {
             display: none;
         }
     }
