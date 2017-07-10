@@ -14,7 +14,7 @@
         <nav class="flex-nav">
             <div class="flex-nav__brand-div">
                 <a href="#" class="flex-nav__logo">
-                    <img src="assets/images/spf-logo-navy-text.png">
+                    <img src="assets/images/BlueCircle%20Logo%20-%203.png">
                 </a>
                 <h1 class="flex-nav__title">SKY PARK FARM</h1>
                 <!--The LABEL is set so that it will effect the element with ID toggle - in this case a checkbox. So clicking this LABEL will activate that CHECKBOX-->
@@ -23,16 +23,18 @@
             </div>
             <input type="checkbox" id="toggle">
             <ul class="js__click-outside-to-close toggle-me flex-nav__ul-level-1">
-                <li class="js-top-tier">
-                    <a href="#" class="flex-nav__link">HOME</a>
-                </li>
+                <!--
+<li class="js-top-tier">
+    <a href="#" class="flex-nav__link">HOME</a>
+</li>
+-->
                 <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
-                    <a class="flex-nav__link">ABOUT</a>
+                    <a class="flex-nav__link">ABOUT US</a>
                     <ul class="flex-nav__ul-level-2 js-hide-sub-menu" onmouseleave="closeSubMenus()">
-                        <li><a href="#" class="flex-nav__link">HISTORY</a></li>
-                        <li><a href="#" class="flex-nav__link">TODAY</a></li>
-                        <li><a href="#" class="flex-nav__link">THEN &amp; NOW</a></li>
                         <li><a href="#" class="flex-nav__link">THE FUTURE</a></li>
+                        <li><a href="#" class="flex-nav__link">TODAY</a></li>
+                        <li><a href="#" class="flex-nav__link">HISTORY</a></li>
+                        <li><a href="#" class="flex-nav__link">THEN &amp; NOW</a></li>
                     </ul>
                 </li>
                 <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
@@ -46,16 +48,16 @@
                 <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
                     <a href="#" class="flex-nav__link">THE TEAM</a>
                     <ul class="flex-nav__ul-level-2 js-hide-sub-menu">
-                        <li><a href="#" class="flex-nav__link">OWNERS - Pierce &amp; Victoria Noonan</a></li>
-                        <li><a href="#" class="flex-nav__link">ESTATE MANAGER - Dominic Strutt</a></li>
-                        <li><a href="#" class="flex-nav__link">FELIX NEILSON</a></li>
+                        <li><a href="#" class="flex-nav__link">THE OWNERS</a></li>
+                        <li><a href="#" class="flex-nav__link">ESTATE MANAGER</a></li>
+                        <li><a href="#" class="flex-nav__link">RANGER</a></li>
                     </ul>
                 </li>
                 <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
                     <a href="#" class="flex-nav__link">DEER FARM</a>
                     <ul class="flex-nav__ul-level-2 js-hide-sub-menu">
                         <li><a href="#" class="flex-nav__link">HOW IT WORKS</a></li>
-                        <li><a href="#" class="flex-nav__link">ABOUT RED DEER</a></li>
+                        <li><a href="#" class="flex-nav__link">RED DEER</a></li>
                         <li><a href="#" class="flex-nav__link">VENISON &amp; HEALTH</a></li>
                     </ul>
                 </li>
@@ -90,9 +92,11 @@
             <div class="medium-12">
                 <img src="assets/images/spfAdHeroSmallCrop.jpg">
             </div>
-            <div class="large-hero__text-box">
-                <h1 class="large-hero__title">WELCOME</h1>
-            </div>
+            <!--
+<div class="large-hero__text-box">
+    <h1 class="large-hero__title">WELCOME</h1>
+</div>
+-->
         </section>
     </div>
 
