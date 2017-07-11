@@ -3,51 +3,69 @@
 .full-page-row {
     padding-left: 1%;
     padding-right: 1%;
-    /*
+
+/*
     @mixin atLarge {
         padding-left: 3%;
         padding-right: 0;
     }
 */
+
 }
 
 .page-content {
     &__outer-row {
         justify-content: space-around;
     }
+    &__inner-row {
+    padding-bottom: 20px;
+        justify-content: space-around;
+        background-color: $backGrey;
+        border: 2px solid $borderGrey;
+    }
+/*
     &__column-left {
         background-color: $backGrey;
         @mixin atLarge {
             border: 2px solid $borderGrey;
         }
     }
+*/
+/*
     &__column-right {
         background-color: $backGrey;
         @mixin atLarge {
             border: 2px solid $borderGrey;
         }
     }
+*/
     &__content-box {
-        font-size: 1.25rem;
+        font-size: 2rem;
         text-align: justify;
-        background-color: $backGrey;
-        padding: 0 10% 0 10%;
+        padding: 2% 10% 0 10%;
         @mixin atLarge {
-            padding: 0 2% 0 2%;
+            padding: 2% 2% 0 2%;
         }
+/*
         &__top {
             padding-top: 20px;
         }
+*/
     }
     img {
         border-radius: 3%;
         display: block;
         margin: 0 auto;
+        width: 100%;
+        @mixin atMedium {
+        width: 80%;
+        }
     }
     &__heading {
         text-align: center;
     }
     &__dom-pic {
         width: 90%;
+        border-radius: 3%;
     }
 }
