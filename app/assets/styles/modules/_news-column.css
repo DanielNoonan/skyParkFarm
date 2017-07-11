@@ -1,0 +1,25 @@
+.news-column {
+    display: none;
+    text-align: center;
+    height: 100vh;
+    &__text-box {
+        background: $backGrey;
+        border: 2px solid $borderGrey;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    &__flex-container {
+        border: 2px solid $borderGrey;
+        height: 100%;
+        &__item {
+            background-color: $backGrey;
+            text-align: center;
+            height: 25%;
+        }
+    }
+    /*
+    @mixin atLarge {
+        display: block;
+    }
+*/
+}

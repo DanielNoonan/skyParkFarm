@@ -451,6 +451,29 @@ template {
   display: none;
 }
 
+/*To use a mixin: have the .class inside the mixin OR have the mixin inside the .class*/
+
+/*
+@mixin atSmall {
+    .className {
+        color: red;
+    }
+}
+*/
+
+/*If you use the mixin inside a selector then it will apply to that selector:*/
+
+/*
+.title {
+    color: red;
+    font-size: 2rem;
+
+    @mixin atSmall {
+        color: blue;
+    }
+
+}*/
+
 /***  flexgrid  */
 
 /*box-sizing must be border box for the column calc() widths to work out and fit precisely.*/
@@ -569,7 +592,7 @@ template {
 
 /*  Classes For Medium Sized Screens  */
 
-@media all and (min-width: 640px) {
+@media all and (min-width: 800px) {
     .medium-12 {
         -webkit-box-flex: 0;
             -ms-flex: 0 0 100%;
@@ -699,8 +722,6 @@ template {
 
 /****************************************************************/
 
-/**  global  **/
-
 html {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -714,7 +735,7 @@ html {
 }
 
 html {
-    font-size: 62.5%rem;
+    font-size: 62.5%;
 }
 
 body {
@@ -726,21 +747,24 @@ img {
     height: auto;
 }
 
-/**************************************************************/
-
-/*
-body {
-    font-family: sans-serif;
-    margin: 0;
-    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+a {
+    text-decoration: none;
 }
-*/
 
-/****************/
+a:hover {
+    color: black;
+}
+
+/*NOTE: need to include -- onmouseleave="closeSubMenus()" -- in the Top Tier (.flex-nav__has-sub-menu) <li> for that sub-menu, so that even if you click to open it, the sub-menu will still close when the mouse leaves*/
+
+.flex-nav-wrapper {
+    height: 140px;
+}
 
 /*Flex Container - Main*/
 
 .flex-nav {
+    z-index: 999;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -752,11 +776,11 @@ body {
             align-items: center;
 }
 
-.flex-nav a,
-    .flex-nav p {
+.flex-nav__link {
+        background: #000034;
         color: #BC7817;
         font-weight: 700;
-        font-size: 1.25rem;
+        font-size: 1.6rem;
         letter-spacing: 2px;
         text-decoration: none;
         padding: 30px 5px;
@@ -768,7 +792,7 @@ body {
         transition: all 0.1s;
     }
 
-.flex-nav .flex-nav__link__animation:hover {
+.flex-nav__link:hover {
         color: white;
         border-top: 1px solid white;
         border-bottom: 1px solid white;
@@ -776,94 +800,93 @@ body {
         padding-bottom: 20px;
     }
 
-.flex-nav h1 {
-        /*        padding-right: 20px;*/
-        font-size: 3rem;
-        /*            padding-top: 10%;*/
-        text-align: center;
-        color: #BC7817;
-    }
-
-.flex-nav .flex-nav__logo-div {
+.flex-nav__brand-div {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
-.flex-nav .flex-nav__logo-div .flex-nav__logo {
-            padding: 0;
-            margin: 5px 0;
-            height: 130px;
-            background: transparent;
+.flex-nav__logo {
+        padding: 0;
+        margin: 5px 0;
+        height: 130px;
+        background: transparent;
+    }
+
+.flex-nav__logo img {
+            height: 100%;
+            min-width: 130px;
         }
 
-.flex-nav .flex-nav__logo-div .flex-nav__logo img {
-                height: 100%;
-                min-width: 130px;
-            }
-
-/* Flex Container - menu*/
-
-.ul-level-1 {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 1000px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-
-/*UL level 2 multi level menu*/
-
-.ul-level-2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    /**Need position:absolute so it extends outside the nav-bar**/
-    position: absolute;
-    /*    right: 0;*/
-    background: #000034;
-    list-style-type: none;
-    padding: 0;
-    /*    margin-top: 12px;*/
-    width: 100%;
-    z-index: 10;
-    border-top: 1px solid white;
-    border-right: 1px solid white;
-    border-bottom: 1px solid white;
-    border-left: 1px solid white;
-}
-
-.ul-level-2 a {
-        color: silver;
+.flex-nav__title {
+        /*        padding-right: 20px;*/
+        font-size: 3.5rem;
+        /*            padding-top: 10%;*/
+        /*        text-align: center;*/
+        color: #BC7817;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
     }
 
-.hide-sub-menu {
-    display: none;
-}
+.flex-nav__ul-level-1 {
+        z-index: 999;
+        -webkit-box-flex: 2;
+            -ms-flex: 2;
+                flex: 2;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 1000px;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        background: #000034;
+    }
 
-nav ul li {
-    /**Need position:relative so can make ul-level-2 position absolute**/
-    position: relative;
-}
+.flex-nav__has-sub-menu {
+        /*    *Need position:relative so can make ul-level-2 position absolute**/
+        position: relative;
+    }
 
-/**************************/
+.flex-nav__ul-level-2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        /**Need position:absolute so it extends outside the nav-bar**/
+        position: absolute;
+        /*    right: 0;*/
+        background: #000034;
+        list-style-type: none;
+        padding: 0;
+        /*    margin-top: 12px;*/
+        min-width: 100%;
+        z-index: 10;
+        border: 1px solid white;
+    }
+
+.flex-nav__ul-level-2 a {
+            color: silver;
+        }
+
+/*Nav Bar Link Spacing*/
 
 .flex-nav li {
-    -webkit-box-flex: 3;
-        -ms-flex: 3;
-            flex: 3;
+    -webkit-box-flex: 5;
+        -ms-flex: 5;
+            flex: 5;
 }
 
 .flex-nav .social {
@@ -872,7 +895,25 @@ nav ul li {
             flex: 1;
 }
 
-/*label and toggle not displaying on larger screen sizes*/
+/**********************************************************************/
+
+/* Creates On-hover Dropdown Sub-menus for desktop view.
+Using the Adjancent Sibling Combinator selector '+' */
+
+@media all and (min-width: 1024px) {
+    .flex-nav__link:hover+ul {
+        display: block;
+    }
+    .flex-nav ul:hover {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+/**********************************************************************/
+
+/*label styles and #toggle not displaying on larger screen sizes*/
 
 label {
     font-size: 100px;
@@ -886,48 +927,71 @@ label {
     display: none;
 }
 
-/**********************/
+/**********************************************************************/
+
+/**javaScript Adds & Removes this class to turn submenues ON/OFF**/
+
+.js-hide-sub-menu {
+    display: none;
+}
+
+/**********************************************************************/
+
+/**Makes navbar fixed position for larger screens**/
+
+@media all and (min-width:1024px) {
+    .flex-nav {
+        /*        z-index: 999;*/
+        width: 100%;
+        position: fixed;
+    }
+}
+
+/**********************************************************************/
+
+/*Responsive Changes For Smaller Screen Sizes*/
 
 @media all and (max-width: 1023px) {
-    /*Overall Container*/
     .flex-nav {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
     }
-        .flex-nav a {
-            font-size: 4rem;
+        .flex-nav__brand-div {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
         }
-    /*    logo and title*/
-    /*
-    .logo-div {
-        flex: 1 1 100%;
-        justify-content: space-around;
-    }
-*/
-    /*Menu*/
-    .flex-nav ul {
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    }
-    .flex-nav li {
-        -webkit-box-flex: 1;
-            -ms-flex: 1 1 100%;
-                flex: 1 1 100%;
-    }
-    .flex-nav .social {
-        -webkit-box-flex: 1;
-            -ms-flex: 1 1 25%;
-                flex: 1 1 25%;
-    }
-    .ul-level-2 {
-        position: absolute;
-    }
+        .flex-nav__ul-level-1 {
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        }
+        .flex-nav a {
+            font-size: 2.5rem;
+            border-radius: 0%;
+        }
+        .flex-nav__link:hover {
+            color: white;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .flex-nav li {
+            -webkit-box-flex: 1;
+                -ms-flex: 1 1 100%;
+                    flex: 1 1 100%;
+        }
+    /********************************/
     /*Hamburger Toggle Functionality*/
     label {
         display: block;
         cursor: pointer;
     }
-    .flex-nav .toggle-me {
+    .toggle-me {
         display: none;
     }
     #toggle:checked+.toggle-me {
@@ -938,18 +1002,25 @@ label {
         display: -ms-flexbox;
         display: flex;
     }
-    /****************/
 }
 
-@media all and (max-width: 600px) {
-    .flex-nav li {
-        -ms-flex-preferred-size: 100%;
-            flex-basis: 100%;
+/**Reducing the Title font size within this specific screen size range**/
+
+/*
+@media all and (min-width: 1024px) and (max-width: 1130px) {
+    .flex-nav {
+        &__title {
+            margin: 0;
+            font-size: 2rem;
+        }
     }
 }
+*/
 
-@media all and (max-width: 480px) {
-        .flex-nav h1 {
+/*Hide Title On Very Small Screens*/
+
+@media all and (max-width: 640px) {
+        .flex-nav__title {
             display: none;
         }
 }
@@ -961,16 +1032,14 @@ label {
 
 .large-hero__text-box {
         position: absolute;
-        top: 15%;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
+        top: 18px;
         width: 100%;
     }
 
 .large-hero__title {
         font-size: 2rem;
         color: white;
-        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.9);
+        text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.9);
         text-align: center;
     }
 
@@ -980,34 +1049,141 @@ label {
     }
 }
 
-.button-box {
-    height: 200px;
-    border: 5px solid black;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+.news-column {
+    display: none;
+    text-align: center;
+    height: 100vh;
+    /*
+    @mixin atLarge {
+        display: block;
+    }
+*/
 }
 
-.button-box__btn {
-        font-size: 1.5rem;
-        padding: 15px;
-        background: #000034;
-        border-radius: 10px;
-        color: white;
-        text-decoration: none;
+.news-column__text-box {
+        background: #F6F6F6;
+        border: 2px solid #E6E6E6;
+        margin-top: 5px;
+        margin-bottom: 10px;
     }
 
-.button-box p {
-        font-size: 1.5rem;
-        color: #000034;
+.news-column__flex-container {
+        border: 2px solid #E6E6E6;
+        height: 100%;
     }
 
-.flex-nav__title__nav-bar-three h1 {
-        color: #80D2F6;
+.news-column__flex-container__item {
+            background-color: #F6F6F6;
+            text-align: center;
+            height: 25%;
+        }
+
+.page-title {
+    text-align: center;
+}
+
+.page-title__text-box {
+        background: #F6F6F6;
+        border: 2px solid #E6E6E6;
+        margin-top: 5px;
+        margin-bottom: 10px;
     }
 
-.blue-links-nav a {
-        color: #80D4F7;
+/*Uncomment the .full-page-row mixin styles when the News Column is included. It just gives everything suitable margins from the the edge of the screen*/
+
+.full-page-row {
+    padding-left: 1%;
+    padding-right: 1%;
+    /*
+    @mixin atLarge {
+        padding-left: 3%;
+        padding-right: 0;
+    }
+*/
+}
+
+.page-content__outer-row {
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    }
+
+.page-content__column-left {
+        background-color: #F6F6F6;
+    }
+
+@media (min-width: 1024px) {
+
+.page-content__column-left {
+            border: 2px solid #E6E6E6
+    }
+    }
+
+.page-content__column-right {
+        background-color: #F6F6F6;
+    }
+
+@media (min-width: 1024px) {
+
+.page-content__column-right {
+            border: 2px solid #E6E6E6
+    }
+    }
+
+.page-content__content-box {
+        font-size: 1.25rem;
+        text-align: justify;
+        background-color: #F6F6F6;
+        padding: 0 10% 0 10%;
+    }
+
+@media (min-width: 1024px) {
+
+.page-content__content-box {
+            padding: 0 2% 0 2%
+    }
+    }
+
+.page-content__content-box__top {
+            padding-top: 20px;
+        }
+
+.page-content img {
+        border-radius: 3%;
+        display: block;
+        margin: 0 auto;
+    }
+
+.page-content__heading {
+        text-align: center;
+    }
+
+.page-content__dom-pic {
+        width: 90%;
+    }
+
+.footer {
+    /*
+    margin-left: 1%;
+    margin-right: 1%;
+*/
+    margin-top: 10px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background: #F6F6F6;
+}
+
+.footer__section {
+        text-align: center;
+    }
+
+.footer__title {
+        color: #BC7817;
+        width: 70%;
+        margin: 0 auto;
+        border-bottom: 1px solid #E6E6E6;
+        padding: 10px 0 10px 0;
+    }
+
+.footer__item {
+        color: #BC7817;
     }

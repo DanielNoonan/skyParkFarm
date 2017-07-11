@@ -3,14 +3,13 @@
     position: relative;
     &__text-box {
         position: absolute;
-        top: 15%;
-        transform: translateY(-50%);
+        top: 18px;
         width: 100%;
     }
     &__title {
         font-size: 2rem;
         color: white;
-        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.9);
+        text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.9);
         text-align: center;
     }
 }

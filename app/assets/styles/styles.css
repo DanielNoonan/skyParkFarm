@@ -1,8 +1,13 @@
 /*Main CSS file: The recipe pointing towards the required ingredients. Ingredients that each have their own specific, focused purpose*/
 
 @import 'normalize.css';
-@import 'base/_flexgrid';
+@import 'base/_mixins';
+@import 'base/_variables';
+@import 'base/_flex-grid';
 @import 'base/_global';
-@import 'base/_flexnav';
+@import 'base/_flex-nav';
 @import 'modules/_hero';
-@import 'modules/_temp-buttons';
+@import 'modules/_news-column';
+@import 'modules/_page-title';
+@import 'modules/_page-content';
+@import 'modules/_footer';

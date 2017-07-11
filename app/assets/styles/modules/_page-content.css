@@ -1,0 +1,53 @@
+/*Uncomment the .full-page-row mixin styles when the News Column is included. It just gives everything suitable margins from the the edge of the screen*/
+
+.full-page-row {
+    padding-left: 1%;
+    padding-right: 1%;
+    /*
+    @mixin atLarge {
+        padding-left: 3%;
+        padding-right: 0;
+    }
+*/
+}
+
+.page-content {
+    &__outer-row {
+        justify-content: space-around;
+    }
+    &__column-left {
+        background-color: $backGrey;
+        @mixin atLarge {
+            border: 2px solid $borderGrey;
+        }
+    }
+    &__column-right {
+        background-color: $backGrey;
+        @mixin atLarge {
+            border: 2px solid $borderGrey;
+        }
+    }
+    &__content-box {
+        font-size: 1.25rem;
+        text-align: justify;
+        background-color: $backGrey;
+        padding: 0 10% 0 10%;
+        @mixin atLarge {
+            padding: 0 2% 0 2%;
+        }
+        &__top {
+            padding-top: 20px;
+        }
+    }
+    img {
+        border-radius: 3%;
+        display: block;
+        margin: 0 auto;
+    }
+    &__heading {
+        text-align: center;
+    }
+    &__dom-pic {
+        width: 90%;
+    }
+}

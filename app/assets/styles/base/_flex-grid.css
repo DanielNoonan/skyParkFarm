@@ -98,7 +98,7 @@
 
 /*  Classes For Medium Sized Screens  */
 
-@media all and (min-width: 640px) {
+@media all and (min-width: 800px) {
     .medium-12 {
         flex: 0 0 100%;
     }

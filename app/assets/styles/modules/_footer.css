@@ -1,0 +1,22 @@
+.footer {
+    /*
+    margin-left: 1%;
+    margin-right: 1%;
+*/
+    margin-top: 10px;
+    justify-content: space-around;
+    background: $backGrey;
+    &__section {
+        text-align: center;
+    }
+    &__title {
+        color: $spfGold;
+        width: 70%;
+        margin: 0 auto;
+        border-bottom: 1px solid $borderGrey;
+        padding: 10px 0 10px 0;
+    }
+    &__item {
+        color: $spfGold;
+    }
+}
