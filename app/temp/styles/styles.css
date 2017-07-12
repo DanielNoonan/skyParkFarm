@@ -1044,21 +1044,24 @@ label {
         text-align: center;
     }
 
-@media all and (min-width: 1024px) {
-    .large-hero {
-        display: block;
-    }
+@media (min-width: 1024px) {
+
+.large-hero {
+        display: block
 }
+    }
 
 .news-column {
     display: none;
     text-align: center;
     height: 100vh;
-    /*
+
+/*
     @mixin atLarge {
         display: block;
     }
 */
+
 }
 
 .news-column__text-box {
@@ -1084,6 +1087,7 @@ label {
 }
 
 .page-title__text-box {
+        font-size: 2rem;
         background: #F6F6F6;
         border: 2px solid #E6E6E6;
         margin-top: 5px;
@@ -1095,12 +1099,14 @@ label {
 .full-page-row {
     padding-left: 1%;
     padding-right: 1%;
-    /*
+
+/*
     @mixin atLarge {
         padding-left: 3%;
         padding-right: 0;
     }
 */
+
 }
 
 .page-content__outer-row {
@@ -1108,50 +1114,62 @@ label {
             justify-content: space-around;
     }
 
-.page-content__column-left {
+.page-content__inner-row {
+    padding-bottom: 20px;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         background-color: #F6F6F6;
+        border: 2px solid #E6E6E6;
     }
 
-@media (min-width: 1024px) {
-
-.page-content__column-left {
-            border: 2px solid #E6E6E6
+/*
+    &__column-right {
+        background-color: $backGrey;
+        @mixin atLarge {
+            border: 2px solid $borderGrey;
+        }
     }
-    }
-
-.page-content__column-right {
-        background-color: #F6F6F6;
-    }
-
-@media (min-width: 1024px) {
-
-.page-content__column-right {
-            border: 2px solid #E6E6E6
-    }
-    }
+*/
 
 .page-content__content-box {
-        font-size: 1.25rem;
+        font-size: 2rem;
         text-align: justify;
-        background-color: #F6F6F6;
-        padding: 0 10% 0 10%;
-    }
-
-@media (min-width: 1024px) {
-
-.page-content__content-box {
-            padding: 0 2% 0 2%
-    }
-    }
-
-.page-content__content-box__top {
+        padding: 2% 10% 0 10%;
+/*
+        &__top {
             padding-top: 20px;
         }
+*/
+    }
+
+@media (min-width: 1024px) {
+
+.page-content__content-box {
+            padding: 2% 2% 0 2%
+    }
+    }
+
+/*
+    &__column-left {
+        background-color: $backGrey;
+        @mixin atLarge {
+            border: 2px solid $borderGrey;
+        }
+    }
+*/
 
 .page-content img {
         border-radius: 3%;
         display: block;
         margin: 0 auto;
+        width: 100%;
+    }
+
+@media (min-width: 800px) {
+
+.page-content img {
+        width: 80%
+    }
     }
 
 .page-content__heading {
@@ -1160,6 +1178,7 @@ label {
 
 .page-content__dom-pic {
         width: 90%;
+        border-radius: 3%;
     }
 
 .footer {
