@@ -1207,3 +1207,59 @@ label {
 .footer__item {
         color: #BC7817;
     }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #404040;
+}
+
+.modal__main-row {
+        height: 100vh;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        /*        margin-top: 5rem;*/
+    }
+
+.modal__content-box {
+        background-color: #F6F6F6;
+        height: 80vh;
+        text-align: center;
+        overflow: auto;
+    }
+
+.modal__title {
+        font-size: 4rem;
+        background-color: white;
+        margin: 0;
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+    }
+
+.modal__column {
+        padding-right: 3rem;
+        padding-left: 3rem;
+        padding-bottom: 2rem;
+    }
+
+.modal__image {
+        width: 90%;
+        border-radius: 3%;
+    }
+
+.modal__text {
+        text-align: justify;
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+    }
+
+.modal__sub-title {
+        margin-bottom: 0;
+    }
