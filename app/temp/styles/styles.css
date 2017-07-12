@@ -1104,9 +1104,9 @@ label {
     }
 
 .news-column__button:hover {
-        color: #BC7817;
-        background: #000034;
-    }
+            color: #BC7817;
+            background: #000034;
+        }
 
 @media (min-width: 1024px) {
 
@@ -1246,7 +1246,6 @@ label {
     }
 
 .modal {
-    display: none;
     position: fixed;
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.7);
@@ -1300,3 +1299,23 @@ label {
 .modal__sub-title {
         margin-bottom: 0;
     }
+
+.modal__close-button {
+        color: white;
+        font-size: 5rem;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        -webkit-transition: all 0.1s;
+        transition: all 0.1s;
+    }
+
+.modal__close-button:hover {
+            font-size: 6rem;
+            color: #adadad;
+        }
+
+.modal--hidden {
+    display: none;
+}

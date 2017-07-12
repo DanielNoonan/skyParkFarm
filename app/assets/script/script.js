@@ -60,3 +60,22 @@ document.addEventListener('click', function (event) {
         closeSubMenus();
     }
 });
+
+
+//MODALS//
+//Modals must be put into the HTML in the same order as their corresponding News Column items.
+
+let modalButtonArray = Array.from(document.querySelectorAll('.modal-button--open'));
+let modalsArray = Array.from(document.querySelectorAll('.modal'));
+let modalButtonClicked;
+
+
+modalButtonArray.forEach(item => {
+    //add event listeners to each of the modal buttons
+    item.addEventListener('click', () => {
+        //get the index of the clicked one
+        modalButtonClicked = modalButtonArray.indexOf(item);
+        //remove the .modal--hidden class from the corresponding modal of the same index value;
+        modalsArray[modalButtonClicked].classList.remove('modal--hidden');
+    });
+});

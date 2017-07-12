@@ -1,5 +1,4 @@
 .modal {
-    display: none;
     position: fixed;
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.7);
@@ -43,4 +42,21 @@
     &__sub-title {
         margin-bottom: 0;
     }
+    &__close-button {
+        color: white;
+        font-size: 5rem;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        transition: all 0.1s;
+        &:hover {
+            font-size: 6rem;
+            color: #adadad;
+        }
+    }
+}
+
+.modal--hidden {
+    display: none;
 }
