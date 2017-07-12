@@ -2,26 +2,49 @@
     display: none;
     text-align: center;
     height: 100vh;
-    &__text-box {
+    color: $textGrey;
+    &__title-box {
         background: $backGrey;
         border: 2px solid $borderGrey;
         margin-top: 5px;
         margin-bottom: 10px;
+        font-size: 2rem;
     }
-    &__flex-container {
+    &__content-box {
         border: 2px solid $borderGrey;
-        height: 100%;
-        &__item {
-            background-color: $backGrey;
-            text-align: center;
-            height: 25%;
-        }
     }
-
-/*
+    &__content-item {
+        border-bottom: 2px solid $borderGrey;
+        padding: 0 1rem;
+    }
+    &__content-title {
+        font-size: 2.5rem;
+    }
+    &__image {
+        border-radius: 3%;
+    }
+    &__intro-text {
+        font-size: 2rem;
+    }
+    &__button {
+        background: $backGrey;
+        color: $textGrey;
+        font-weight: 700;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        text-decoration: none;
+        padding: 20px;
+        border-radius: 5%;
+        display: inline-block;
+        width: 50%;
+        margin-bottom: 2rem;
+        transition: all 0.1s;
+    }
+    &__button:hover {
+        color: $spfGold;
+        background: $dnwBlue;
+    }
     @mixin atLarge {
         display: block;
     }
-*/
-
 }

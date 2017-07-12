@@ -1055,32 +1055,65 @@ label {
     display: none;
     text-align: center;
     height: 100vh;
-
-/*
-    @mixin atLarge {
-        display: block;
-    }
-*/
-
+    color: #404040;
 }
 
-.news-column__text-box {
+.news-column__title-box {
         background: #F6F6F6;
         border: 2px solid #E6E6E6;
         margin-top: 5px;
         margin-bottom: 10px;
+        font-size: 2rem;
     }
 
-.news-column__flex-container {
+.news-column__content-box {
         border: 2px solid #E6E6E6;
-        height: 100%;
     }
 
-.news-column__flex-container__item {
-            background-color: #F6F6F6;
-            text-align: center;
-            height: 25%;
-        }
+.news-column__content-item {
+        border-bottom: 2px solid #E6E6E6;
+        padding: 0 1rem;
+    }
+
+.news-column__content-title {
+        font-size: 2.5rem;
+    }
+
+.news-column__image {
+        border-radius: 3%;
+    }
+
+.news-column__intro-text {
+        font-size: 2rem;
+    }
+
+.news-column__button {
+        background: #F6F6F6;
+        color: #404040;
+        font-weight: 700;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        text-decoration: none;
+        padding: 20px;
+        border-radius: 5%;
+        display: inline-block;
+        width: 50%;
+        margin-bottom: 2rem;
+        -webkit-transition: all 0.1s;
+        transition: all 0.1s;
+    }
+
+.news-column__button:hover {
+        color: #BC7817;
+        background: #000034;
+    }
+
+@media (min-width: 1024px) {
+
+.news-column {
+        display: block
+}
+    }
 
 .page-title {
     text-align: center;
@@ -1099,14 +1132,18 @@ label {
 .full-page-row {
     padding-left: 1%;
     padding-right: 1%;
+}
 
-/*
-    @mixin atLarge {
+@media (min-width: 1024px) {
+
+.full-page-row {
         padding-left: 3%;
-        padding-right: 0;
+        padding-right: 0
+}
     }
-*/
 
+.page-content {
+    color: #404040;
 }
 
 .page-content__outer-row {
@@ -1115,7 +1152,7 @@ label {
     }
 
 .page-content__inner-row {
-    padding-bottom: 20px;
+        padding-bottom: 20px;
         -ms-flex-pack: distribute;
             justify-content: space-around;
         background-color: #F6F6F6;
@@ -1135,7 +1172,7 @@ label {
         font-size: 2rem;
         text-align: justify;
         padding: 2% 10% 0 10%;
-/*
+        /*
         &__top {
             padding-top: 20px;
         }
@@ -1168,7 +1205,7 @@ label {
 @media (min-width: 800px) {
 
 .page-content img {
-        width: 80%
+            width: 80%
     }
     }
 

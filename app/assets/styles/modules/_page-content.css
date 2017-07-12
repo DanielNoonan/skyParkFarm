@@ -3,27 +3,24 @@
 .full-page-row {
     padding-left: 1%;
     padding-right: 1%;
-
-/*
     @mixin atLarge {
         padding-left: 3%;
         padding-right: 0;
     }
-*/
-
 }
 
 .page-content {
+    color: $textGrey;
     &__outer-row {
         justify-content: space-around;
     }
     &__inner-row {
-    padding-bottom: 20px;
+        padding-bottom: 20px;
         justify-content: space-around;
         background-color: $backGrey;
         border: 2px solid $borderGrey;
     }
-/*
+    /*
     &__column-left {
         background-color: $backGrey;
         @mixin atLarge {
@@ -31,7 +28,7 @@
         }
     }
 */
-/*
+    /*
     &__column-right {
         background-color: $backGrey;
         @mixin atLarge {
@@ -46,7 +43,7 @@
         @mixin atLarge {
             padding: 2% 2% 0 2%;
         }
-/*
+        /*
         &__top {
             padding-top: 20px;
         }
@@ -58,7 +55,7 @@
         margin: 0 auto;
         width: 100%;
         @mixin atMedium {
-        width: 80%;
+            width: 80%;
         }
     }
     &__heading {
