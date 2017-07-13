@@ -67,6 +67,7 @@ document.addEventListener('click', function (event) {
 
 let modalButtonArray = Array.from(document.querySelectorAll('.modal-button--open'));
 let modalsArray = Array.from(document.querySelectorAll('.modal'));
+let modalButtonClose = Array.from(document.querySelectorAll('.modal-button--close'));
 let modalButtonClicked;
 
 
@@ -77,5 +78,13 @@ modalButtonArray.forEach(item => {
         modalButtonClicked = modalButtonArray.indexOf(item);
         //remove the .modal--hidden class from the corresponding modal of the same index value;
         modalsArray[modalButtonClicked].classList.remove('modal--hidden');
+    });
+
+});
+
+
+modalButtonClose.forEach(item => {
+    item.addEventListener('click', () => {
+        modalsArray[modalButtonClicked].classList.add('modal--hidden');
     });
 });
