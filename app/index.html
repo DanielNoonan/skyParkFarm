@@ -112,7 +112,7 @@
         <div class="small-12 large-2 news-column">
             <div class="row">
                 <div class="small-12">
-                    <div class="news-column__text-box">
+                    <div class="news-column__title-box">
                         <h1>Latest News</h1>
                         <h2>What's going on at the farm?</h2>
                     </div>
@@ -120,18 +120,28 @@
             </div>
 
             <!--News Column Items-->
-            <div class="row news-column__flex-container">
-                <div class="small-12 news-column__flex-container__item">
-                    NEWS ITEM
+            <div class="row news-column__content-box">
+                <div class="small-12 news-column__content-item">
+                    <h1 class="news-column__content-title">Sample Title</h1>
+                    <img class="news-column__image" srcset="assets/images/mum-baby-deer-SMALL.jpg 640w, assets/images/mum-baby-deer-MEDIUM.jpg 1200w, assets/images/mum-baby-deer-LARGE.jpg 1920w" alt="Mother and baby deer together">
+                    <p class="news-column__intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#/" class="news-column__button modal-button--open">Read More</a>
                 </div>
-                <div class="small-12 news-column__flex-container__item">
-                    NEWS ITEM
+                <div class="small-12 news-column__content-item">
+                    <h1 class="news-column__content-title">Sample Title</h1>
+                    <img class="news-column__image" src="assets/images/mobile_2.jpg" alt="Deer Farm Picture">
+                    <p class="news-column__intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#/" class="news-column__button modal-button--open">Read More</a>
+                    <!--The / in the href="#/" in the above <a> prevents the page from scrolling to the top of the page when it is clicked-->
                 </div>
-                <div class="small-12 news-column__flex-container__item">
-                    NEWS ITEM
+                <div class="small-12 news-column__content-item">
+                    <h1 class="news-column__content-title">Sample Title</h1>
                 </div>
-                <div class="small-12 news-column__flex-container__item">
-                    NEWS ITEM
+                <div class="small-12 news-column__content-item">
+                    <h1 class="news-column__content-title">Sample Title</h1>
+                </div>
+                <div class="small-12 news-column__content-item">
+                    <h1 class="news-column__content-title">Sample Title</h1>
                 </div>
             </div>
         </div>
@@ -205,12 +215,12 @@
                             </p>
                         </div>
                         <div class="small-12 large-7 page-content__content-box">
-                            <img class="page-content__dom-pic" src="assets/images/mobile_5.jpg" alt="Estate Manager Domonic tending to a deer">
+                            <img class="page-content__dom-pic" srcset="assets/images/dom-stroking-deer-SMALL.jpg 640w, assets/images/dom-stroking-deer-MEDIUM 1200w, assets/images/dom-stroking-deer-LARGE.jpg 1920w" alt="Estate Manager Domonic tending to a deer">
                         </div>
                     </div>
                 </div>
-<!--Right Column-->
-<!--
+                <!--Right Column-->
+                <!--
                 <div class="small-12 large-5 page-content__column-right">
                     <div class="row">
                         <div class="small-12 page-content__content-box page-content__content-box__top">
@@ -310,6 +320,54 @@
         </div>
 
     </footer>
+
+    <!---------->
+    <!--MODALS-->
+    <!---------->
+
+    <!--1ST NEWS ITEM MODAL-->
+    <div class="modal modal--hidden">
+        <div class="row modal__main-row">
+            <div class="small-11 modal__content-box">
+                <div class="row">
+                    <h1 class="small-12 modal__title">Sample Title - News Article With Image</h1>
+                    <div class="small-12 large-4 modal__column">
+                        <img srcset="assets/images/mum-baby-deer-SMALL.jpg 640w, assets/images/mum-baby-deer-MEDIUM.jpg 1200w, assets/images/mum-baby-deer-LARGE.jpg 1920w" alt="Mother and baby deer together" class="modal__image">
+                        <h2>Sample Picture Text - picture of a Red Deer on the run</h2>
+                        <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <div class="small-12 large-4 modal__column">
+                        <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+
+                        <h2 class="modal__sub-title">Sub-title Text - New Heading For The Following Text</h2>
+                        <p class="modal__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <div class="small-12 large-4 modal__column">
+                        <h2 class="modal__sub-title">Sub-title Text - New Heading For The Following Text</h2>
+                        <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__close-button modal-button--close">X Close</div>
+        </div>
+    </div>
+
+    <!--2ND NEWS ITEM MODAL-->
+    <div class="modal modal--hidden">
+        <div class="row modal__main-row">
+            <div class="small-11 modal__content-box">
+                <div class="row">
+                    <h1 class="small-12 modal__title">Sample Title - News Article With Image</h1>
+                    <div class="small-12 large-4 modal__column">
+                        <img src="assets/images/mobile_3.jpg" alt="News Item Image" class="modal__image">
+                        <h2>Sample Picture Text - picture of a Red Deer on the run</h2>
+                        <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__close-button modal-button--close">X Close</div>
+        </div>
+    </div>
 
 
     <script src="assets/script/script.js"></script>
