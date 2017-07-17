@@ -17,8 +17,8 @@
     &__inner-row {
         padding-bottom: 20px;
         justify-content: space-around;
-        background-color: $backGrey;
-        border: 2px solid $borderGrey;
+/*        background-color: $backGrey;*/
+/*        border: 2px solid $borderGrey;*/
     }
     /*
     &__column-left {
@@ -48,6 +48,8 @@
             font-size: 3.5rem;
             @mixin atLarge {
                 font-size: 2rem;
+                padding-left: 5%;
+                padding-right: 5%;
             }
         }
     }
@@ -57,7 +59,7 @@
         margin: 0 auto;
         width: 100%;
         @mixin atLarge {
-            width: 80%;
+            width: 85%;
         }
     }
     &__heading {

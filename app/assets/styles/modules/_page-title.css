@@ -2,9 +2,11 @@
     text-align: center;
     &__text-box {
         font-size: 2rem;
-        background: $backGrey;
-        border: 2px solid $borderGrey;
+/*        background: $backGrey;*/
+/*        border: 2px solid $borderGrey;*/
         margin-top: 5px;
         margin-bottom: 10px;
+        padding-top: 1px;/**don't need this if have the border activated**/
+        padding-bottom: 1px;/**don't need this if have the border activated**/
     }
 }
