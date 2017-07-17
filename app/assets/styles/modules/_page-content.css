@@ -39,22 +39,24 @@
     &__content-box {
         font-size: 2rem;
         text-align: justify;
-        padding: 2% 10% 0 10%;
+        padding-top: 2%;
         @mixin atLarge {
             padding: 2% 2% 0 2%;
         }
-        /*
-        &__top {
-            padding-top: 20px;
+        p {
+            padding: 0 2% 0 2%;
+            font-size: 3.5rem;
+            @mixin atLarge {
+                font-size: 2rem;
+            }
         }
-*/
     }
     img {
         border-radius: 3%;
         display: block;
         margin: 0 auto;
         width: 100%;
-        @mixin atMedium {
+        @mixin atLarge {
             width: 80%;
         }
     }
