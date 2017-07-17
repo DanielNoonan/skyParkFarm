@@ -1171,12 +1171,7 @@ label {
 .page-content__content-box {
         font-size: 2rem;
         text-align: justify;
-        padding: 2% 10% 0 10%;
-        /*
-        &__top {
-            padding-top: 20px;
-        }
-*/
+        padding-top: 2%;
     }
 
 @media (min-width: 1024px) {
@@ -1184,6 +1179,18 @@ label {
 .page-content__content-box {
             padding: 2% 2% 0 2%
     }
+    }
+
+.page-content__content-box p {
+            padding: 0 2% 0 2%;
+            font-size: 3.5rem;
+        }
+
+@media (min-width: 1024px) {
+
+.page-content__content-box p {
+                font-size: 2rem
+        }
     }
 
 /*
@@ -1202,7 +1209,7 @@ label {
         width: 100%;
     }
 
-@media (min-width: 800px) {
+@media (min-width: 1024px) {
 
 .page-content img {
             width: 80%
