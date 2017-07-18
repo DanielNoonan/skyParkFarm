@@ -1,6 +1,9 @@
 /*Uncomment the .full-page-row mixin styles when the News Column is included. It just gives everything suitable margins from the the edge of the screen*/
 
 .full-page-row {
+    @mixin atLarge {
+        margin-top: 10px;
+    }
     padding-left: 1%;
     padding-right: 1%;
     &--news-column-padding {
@@ -22,9 +25,9 @@
         background-color: $backGrey;
         &--blue-border {
             @mixin atLarge {
-                border-right: 2px solid $spfBlue;
-                border-bottom: 2px solid $spfBlue;
-                border-left: 2px solid $spfBlue;
+                border-right: 4px solid $spfBlue;
+                border-bottom: 4px solid $spfBlue;
+                border-left: 4px solid $spfBlue;
             }
         }
     }

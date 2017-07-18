@@ -3,17 +3,22 @@
     text-align: center;
     height: 100vh;
     color: $textGrey;
-    &__title-box {
+    &__main-title-box {
         background: $backGrey;
-        border: 2px solid $spfBlue;
+        border: 4px solid $spfBlue;
 /*        padding-top: 1px;don't need this if have the border activated*/
 /*        padding-bottom: 1px;don't need this if have the border activated*/
         margin-top: 5px;
         margin-bottom: 10px;
         font-size: 2rem;
     }
+    &__main-title {
+        color: $spfGold;
+        font-size: 2.9rem;
+        text-decoration: underline;
+    }
     &__content-box {
-        border: 2px solid $spfBlue;
+        border: 4px solid $spfBlue;
         background: $backGrey;
     }
     &__content-item {
@@ -21,13 +26,13 @@
         padding: 0 1rem;
     }
     &__content-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     &__image {
         border-radius: 3%;
     }
     &__intro-text {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     &__button {
         background: $backGrey;
@@ -46,7 +51,7 @@
         &:hover {
             color: $spfGold;
             background: $dnwBlue;
-            border: 2px solid $spfBlue;
+            border: 3px solid $spfBlue;
         }
     }
     @mixin atLarge {

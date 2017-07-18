@@ -19,9 +19,9 @@
         }
         &--blue-border {
             @mixin atLarge {
-                border-top: 2px solid $spfBlue;
-                border-left: 2px solid $spfBlue;
-                border-right: 2px solid $spfBlue;
+                border-top: 4px solid $spfBlue;
+                border-left: 4px solid $spfBlue;
+                border-right: 4px solid $spfBlue;
             }
         }
     }
