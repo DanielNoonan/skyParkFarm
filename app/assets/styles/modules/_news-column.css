@@ -5,19 +5,19 @@
     color: $textGrey;
     &__title-box {
         background: $backGrey;
-/*        border: 2px solid $borderGrey;*/
-        padding-top: 1px;/**don't need this if have the border activated**/
-        padding-bottom: 1px;/**don't need this if have the border activated**/
+        border: 2px solid $spfBlue;
+/*        padding-top: 1px;don't need this if have the border activated*/
+/*        padding-bottom: 1px;don't need this if have the border activated*/
         margin-top: 5px;
         margin-bottom: 10px;
         font-size: 2rem;
     }
     &__content-box {
-/*        border: 2px solid $borderGrey;*/
+        border: 2px solid $spfBlue;
         background: $backGrey;
     }
     &__content-item {
-        border-bottom: 2px solid $borderGrey;
+        border-bottom: 2px solid $spfBlue;
         padding: 0 1rem;
     }
     &__content-title {
@@ -36,13 +36,13 @@
         font-size: 2rem;
         letter-spacing: 2px;
         text-decoration: none;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         border-radius: 5%;
         display: inline-block;
         width: 40%;
         margin-bottom: 2rem;
-        transition: all 0.1s;
+        transition: all 0.2s;
         &:hover {
             color: $spfGold;
             background: $dnwBlue;

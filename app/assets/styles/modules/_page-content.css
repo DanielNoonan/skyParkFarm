@@ -17,8 +17,12 @@
     &__inner-row {
         padding-bottom: 20px;
         justify-content: space-around;
-/*        background-color: $backGrey;*/
-/*        border: 2px solid $borderGrey;*/
+        background-color: $backGrey;
+        @mixin atLarge {
+            border-right: 2px solid $spfBlue;
+            border-bottom: 2px solid $spfBlue;
+            border-left: 2px solid $spfBlue;
+        }
     }
     /*
     &__column-left {

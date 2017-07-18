@@ -2,11 +2,20 @@
     text-align: center;
     &__text-box {
         font-size: 2rem;
-/*        background: $backGrey;*/
-/*        border: 2px solid $borderGrey;*/
+        background: $backGrey;
         margin-top: 5px;
         margin-bottom: 10px;
-        padding-top: 1px;/**don't need this if have the border activated**/
-        padding-bottom: 1px;/**don't need this if have the border activated**/
+        @mixin atLarge {
+            margin-bottom: 0;
+        }
+        /**don't need this padding if have the border activated**/
+        /*        padding-top: 1px;*/
+        /**don't need this padding if have the border activated**/
+        padding-bottom: 1px;
+        @mixin atLarge {
+            border-top: 2px solid $spfBlue;
+            border-left: 2px solid $spfBlue;
+            border-right: 2px solid $spfBlue;
+        }
     }
 }
