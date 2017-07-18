@@ -1126,14 +1126,18 @@ label {
     text-align: center;
 }
 
+@media (min-width: 1024px) {
+
+.page-title--top-margin {
+            margin-top: 10px
+    }
+    }
+
 .page-title__text-box {
         font-size: 2rem;
         background: #F6F6F6;
         margin-top: 5px;
         margin-bottom: 10px;
-        /**don't need this padding if have the border activated**/
-        /*        padding-top: 1px;*/
-        /**don't need this padding if have the border activated**/
         padding-bottom: 1px;
     }
 
@@ -1147,10 +1151,17 @@ label {
 @media (min-width: 1024px) {
 
 .page-title__text-box {
-            border-top: 2px solid #80D4F7;
-            border-left: 2px solid #80D4F7;
-            border-right: 2px solid #80D4F7
+            padding-top: 1px
     }
+    }
+
+@media (min-width: 1024px) {
+
+.page-title__text-box--blue-border {
+                border-top: 2px solid #80D4F7;
+                border-left: 2px solid #80D4F7;
+                border-right: 2px solid #80D4F7
+        }
     }
 
 /*Uncomment the .full-page-row mixin styles when the News Column is included. It just gives everything suitable margins from the the edge of the screen*/
@@ -1162,10 +1173,10 @@ label {
 
 @media (min-width: 1024px) {
 
-.full-page-row {
-        padding-left: 3%;
-        padding-right: 0
-}
+.full-page-row--news-column-padding {
+            padding-left: 3%;
+            padding-right: 0
+    }
     }
 
 .page-content {
@@ -1186,11 +1197,11 @@ label {
 
 @media (min-width: 1024px) {
 
-.page-content__inner-row {
-            border-right: 2px solid #80D4F7;
-            border-bottom: 2px solid #80D4F7;
-            border-left: 2px solid #80D4F7
-    }
+.page-content__inner-row--blue-border {
+                border-right: 2px solid #80D4F7;
+                border-bottom: 2px solid #80D4F7;
+                border-left: 2px solid #80D4F7
+        }
     }
 
 /*
@@ -1203,7 +1214,7 @@ label {
 */
 
 .page-content__content-box {
-        font-size: 2rem;
+        /*        font-size: 2rem;*/
         text-align: justify;
         padding-top: 2%;
     }
@@ -1223,7 +1234,7 @@ label {
 @media (min-width: 1024px) {
 
 .page-content__content-box p {
-                font-size: 2rem;
+                font-size: 2.5rem;
                 padding-left: 5%;
                 padding-right: 5%
         }

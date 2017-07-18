@@ -3,9 +3,11 @@
 .full-page-row {
     padding-left: 1%;
     padding-right: 1%;
-    @mixin atLarge {
-        padding-left: 3%;
-        padding-right: 0;
+    &--news-column-padding {
+        @mixin atLarge {
+            padding-left: 3%;
+            padding-right: 0;
+        }
     }
 }
 
@@ -18,10 +20,12 @@
         padding-bottom: 20px;
         justify-content: space-around;
         background-color: $backGrey;
-        @mixin atLarge {
-            border-right: 2px solid $spfBlue;
-            border-bottom: 2px solid $spfBlue;
-            border-left: 2px solid $spfBlue;
+        &--blue-border {
+            @mixin atLarge {
+                border-right: 2px solid $spfBlue;
+                border-bottom: 2px solid $spfBlue;
+                border-left: 2px solid $spfBlue;
+            }
         }
     }
     /*
@@ -41,7 +45,7 @@
     }
 */
     &__content-box {
-        font-size: 2rem;
+        /*        font-size: 2rem;*/
         text-align: justify;
         padding-top: 2%;
         @mixin atLarge {
@@ -51,7 +55,7 @@
             padding: 0 2% 0 2%;
             font-size: 3.5rem;
             @mixin atLarge {
-                font-size: 2rem;
+                font-size: 2.5rem;
                 padding-left: 5%;
                 padding-right: 5%;
             }
