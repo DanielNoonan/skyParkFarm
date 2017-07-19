@@ -14,6 +14,9 @@ html {
 
 body {
     font-family: 'Garamond', serif;
+    @mixin atLarge {
+        background-color: $dnwBlue;
+    }
 }
 
 img {
