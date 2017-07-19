@@ -17,12 +17,5 @@
         @mixin atLarge {
             padding-top: 1px;
         }
-        &--blue-border {
-            @mixin atLarge {
-                border-top: 4px solid $spfBlue;
-                border-left: 4px solid $spfBlue;
-                border-right: 4px solid $spfBlue;
-            }
-        }
     }
 }

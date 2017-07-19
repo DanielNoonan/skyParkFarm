@@ -8,7 +8,6 @@
         border: 4px solid $spfBlue;
 /*        padding-top: 1px;don't need this if have the border activated*/
 /*        padding-bottom: 1px;don't need this if have the border activated*/
-        margin-top: 5px;
         margin-bottom: 10px;
         font-size: 2rem;
     }

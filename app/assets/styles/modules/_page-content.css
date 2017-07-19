@@ -29,9 +29,7 @@
         background-color: $backGrey;
         &--blue-border {
             @mixin atLarge {
-                border-right: 4px solid $spfBlue;
-                border-bottom: 4px solid $spfBlue;
-                border-left: 4px solid $spfBlue;
+                border: 4px solid $spfBlue;
             }
         }
     }
