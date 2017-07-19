@@ -1125,13 +1125,6 @@ label {
     text-align: center;
 }
 
-@media (min-width: 1024px) {
-
-.page-title--top-margin {
-            margin-top: 10px
-    }
-    }
-
 .page-title__text-box {
         font-size: 2rem;
         background: #F6F6F6;

@@ -1,10 +1,5 @@
 .page-title {
     text-align: center;
-    &--top-margin {
-        @mixin atLarge {
-            margin-top: 10px;
-        }
-    }
     &__text-box {
         font-size: 2rem;
         background: $backGrey;
