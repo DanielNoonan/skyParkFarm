@@ -8,6 +8,8 @@
 /*Flex Container - Main*/
 
 .flex-nav {
+    border-top: 3px solid $spfBlue;
+    border-bottom: 3px solid $spfBlue;
     z-index: 999;
     display: flex;
     justify-content: space-around;

@@ -765,6 +765,8 @@ a:hover {
 /*Flex Container - Main*/
 
 .flex-nav {
+    border-top: 3px solid #80D4F7;
+    border-bottom: 3px solid #80D4F7;
     z-index: 999;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1060,18 +1062,21 @@ label {
 
 .news-column__title-box {
         background: #F6F6F6;
-        border: 2px solid #E6E6E6;
+        border: 2px solid #80D4F7;
+/*        padding-top: 1px;don't need this if have the border activated*/
+/*        padding-bottom: 1px;don't need this if have the border activated*/
         margin-top: 5px;
         margin-bottom: 10px;
         font-size: 2rem;
     }
 
 .news-column__content-box {
-        border: 2px solid #E6E6E6;
+        border: 2px solid #80D4F7;
+        background: #F6F6F6;
     }
 
 .news-column__content-item {
-        border-bottom: 2px solid #E6E6E6;
+        border-bottom: 2px solid #80D4F7;
         padding: 0 1rem;
     }
 
@@ -1094,18 +1099,20 @@ label {
         font-size: 2rem;
         letter-spacing: 2px;
         text-decoration: none;
-        padding: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         border-radius: 5%;
         display: inline-block;
-        width: 50%;
+        width: 40%;
         margin-bottom: 2rem;
-        -webkit-transition: all 0.1s;
-        transition: all 0.1s;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
     }
 
 .news-column__button:hover {
             color: #BC7817;
             background: #000034;
+            border: 2px solid #80D4F7;
         }
 
 @media (min-width: 1024px) {
@@ -1122,9 +1129,28 @@ label {
 .page-title__text-box {
         font-size: 2rem;
         background: #F6F6F6;
-        border: 2px solid #E6E6E6;
         margin-top: 5px;
         margin-bottom: 10px;
+        /**don't need this padding if have the border activated**/
+        /*        padding-top: 1px;*/
+        /**don't need this padding if have the border activated**/
+        padding-bottom: 1px;
+    }
+
+@media (min-width: 1024px) {
+
+.page-title__text-box {
+            margin-bottom: 0
+    }
+    }
+
+@media (min-width: 1024px) {
+
+.page-title__text-box {
+            border-top: 2px solid #80D4F7;
+            border-left: 2px solid #80D4F7;
+            border-right: 2px solid #80D4F7
+    }
     }
 
 /*Uncomment the .full-page-row mixin styles when the News Column is included. It just gives everything suitable margins from the the edge of the screen*/
@@ -1156,7 +1182,15 @@ label {
         -ms-flex-pack: distribute;
             justify-content: space-around;
         background-color: #F6F6F6;
-        border: 2px solid #E6E6E6;
+    }
+
+@media (min-width: 1024px) {
+
+.page-content__inner-row {
+            border-right: 2px solid #80D4F7;
+            border-bottom: 2px solid #80D4F7;
+            border-left: 2px solid #80D4F7
+    }
     }
 
 /*
@@ -1189,7 +1223,9 @@ label {
 @media (min-width: 1024px) {
 
 .page-content__content-box p {
-                font-size: 2rem
+                font-size: 2rem;
+                padding-left: 5%;
+                padding-right: 5%
         }
     }
 
@@ -1212,7 +1248,7 @@ label {
 @media (min-width: 1024px) {
 
 .page-content img {
-            width: 80%
+            width: 85%
     }
     }
 

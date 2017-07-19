@@ -18,7 +18,11 @@
         padding-bottom: 20px;
         justify-content: space-around;
         background-color: $backGrey;
-        border: 2px solid $borderGrey;
+        @mixin atLarge {
+            border-right: 2px solid $spfBlue;
+            border-bottom: 2px solid $spfBlue;
+            border-left: 2px solid $spfBlue;
+        }
     }
     /*
     &__column-left {
@@ -48,6 +52,8 @@
             font-size: 3.5rem;
             @mixin atLarge {
                 font-size: 2rem;
+                padding-left: 5%;
+                padding-right: 5%;
             }
         }
     }
@@ -57,7 +63,7 @@
         margin: 0 auto;
         width: 100%;
         @mixin atLarge {
-            width: 80%;
+            width: 85%;
         }
     }
     &__heading {
