@@ -505,6 +505,7 @@ template {
 /*     Standard Row Settings     */
 
 .row {
+    width: 100%;/**Added this to force each row onto a new line**/
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
