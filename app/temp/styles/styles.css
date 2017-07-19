@@ -1269,6 +1269,10 @@ label {
         border-radius: 3%;
     }
 
+.long-image {
+    max-width: 640px;
+}
+
 .footer {
     /*
     margin-left: 1%;
