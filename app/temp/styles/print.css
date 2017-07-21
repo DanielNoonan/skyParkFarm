@@ -19,6 +19,15 @@ body * {
 }
 */
 
+.modal__content-box {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.modal__text {
+    text-align: justify;
+}
+
 .noprint {
     display: none;
 }

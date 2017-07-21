@@ -1372,6 +1372,28 @@ label {
             color: #adadad;
         }
 
+.modal__print-button {
+        background: #F6F6F6;
+        color: #404040;
+        font-weight: 700;
+        font-size: 2rem;
+/*        letter-spacing: 2px;*/
+        padding-top: 2px;
+        padding-bottom: 2px;
+        border-radius: 5%;
+        display: inline-block;
+        width: 15%;
+/*        margin-bottom: 2rem;*/
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+.modal__print-button:hover {
+            color: #BC7817;
+            background: #000034;
+            border: 3px solid #80D4F7;
+        }
+
 .modal--hidden {
     display: none;
 }

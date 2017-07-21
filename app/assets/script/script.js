@@ -69,6 +69,7 @@ document.addEventListener('click', function (event) {
 let modalButtonArray = Array.from(document.querySelectorAll('.modal-button--open'));
 let modalsArray = Array.from(document.querySelectorAll('.modal'));
 let modalButtonClose = Array.from(document.querySelectorAll('.modal-button--close'));
+let modalPrintButton = Array.from(document.querySelectorAll('.modal__print-button'))
 let modalButtonClicked;
 
 
@@ -94,16 +95,38 @@ modalButtonClose.forEach(item => {
 ///////////////
 
 
-//PRINTING
+//PRINTING MODALS
 
-function printContent(el) {
+modalPrintButton.forEach(item => {
+    let modalsArray = Array.from(document.querySelectorAll('.modal'));
+    item.addEventListener('click', () => {
+        modalsArray[modalButtonClicked].classList.add('printThis');
+        printContent('printThis');
+    });
+});
+
+function printContent() {
     var restorepage = document.body.innerHTML;
-    var printcontent = document.getElementById(el).innerHTML;
+    var printcontent = document.querySelector('.printThis').innerHTML;
     document.body.innerHTML = printcontent;
     window.print();
     document.body.innerHTML = restorepage;
     //reload the page so the event listeners are reset.
     location.reload();
 }
+
+//PRINTING
+
+
+
+//function printContent(el) {
+//    var restorepage = document.body.innerHTML;
+//    var printcontent = document.getElementById(el).innerHTML;
+//    document.body.innerHTML = printcontent;
+//    window.print();
+//    document.body.innerHTML = restorepage;
+//    //reload the page so the event listeners are reset.
+//    location.reload();
+//}
 
 ////////////////
