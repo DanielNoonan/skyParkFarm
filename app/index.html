@@ -4,7 +4,8 @@
 <head>
     <title>Sky Park Farm</title>
     <meta name="viewport" content="width=800" />
-    <link rel="stylesheet" type="text/css" href="temp/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="temp/styles/styles.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="temp/styles/print.css" media="print">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 
@@ -371,10 +372,11 @@
     <!---------->
 
     <!--1ST NEWS ITEM MODAL-->
-    <div class="modal modal--hidden">
+    <div id="modal1" class="modal modal--hidden">
         <div class="row modal__main-row">
             <div class="small-11 modal__content-box">
                 <div class="row">
+                    <button class="noprint" onclick="printContent('modal1')">Print Content</button>
                     <h1 class="small-12 modal__title">Sample Title - News Article With Image</h1>
                     <div class="small-12 large-4 modal__column">
                         <img srcset="assets/images/deer-grazing-lensflare-SMALL.jpg 640w, assets/images/deer-grazing-lensflare-MEDIUM.jpg 1200w, assets/images/deer-grazing-lensflare-LARGE.jpg 1920w" alt="Red Deer grazing in sun rays" class="modal__image">
