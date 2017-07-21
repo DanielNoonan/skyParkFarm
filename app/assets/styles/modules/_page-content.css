@@ -2,7 +2,9 @@
 
 .full-page-row {
     @mixin atLarge {
-        margin-top: 20px;
+        margin-top: 40px;
+        padding-left: 3%;
+        padding-right: 3%;
     }
     padding-left: 1%;
     padding-right: 1%;

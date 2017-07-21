@@ -505,7 +505,6 @@ template {
 /*     Standard Row Settings     */
 
 .row {
-    width: 100%;/**Added this to force each row onto a new line**/
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1158,7 +1157,9 @@ label {
 @media (min-width: 1024px) {
 
 .full-page-row {
-        margin-top: 20px
+        margin-top: 40px;
+        padding-left: 3%;
+        padding-right: 3%
 }
     }
 
