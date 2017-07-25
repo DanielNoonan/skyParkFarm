@@ -86,22 +86,20 @@ modalButtonArray.forEach(item => {
 
 
 modalButtonClose.forEach(item => {
-    let modalsArray = Array.from(document.querySelectorAll('.modal'));
+//    let modalsArray = Array.from(document.querySelectorAll('.modal'));
     item.addEventListener('click', () => {
         modalsArray[modalButtonClicked].classList.add('modal--hidden');
     });
 });
 
-///////////////
-
 
 //PRINTING MODALS
 
 modalPrintButton.forEach(item => {
-    let modalsArray = Array.from(document.querySelectorAll('.modal'));
+//    let modalsArray = Array.from(document.querySelectorAll('.modal'));
     item.addEventListener('click', () => {
         modalsArray[modalButtonClicked].classList.add('printThis');
-        printContent('printThis');
+        printContent();
     });
 });
 
@@ -116,9 +114,6 @@ function printContent() {
 }
 
 //PRINTING
-
-
-
 //function printContent(el) {
 //    var restorepage = document.body.innerHTML;
 //    var printcontent = document.getElementById(el).innerHTML;
@@ -128,5 +123,3 @@ function printContent() {
 //    //reload the page so the event listeners are reset.
 //    location.reload();
 //}
-
-////////////////
