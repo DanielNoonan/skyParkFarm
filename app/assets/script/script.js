@@ -3,6 +3,7 @@
 //Toggle level two sub-menus//
 //////////////////////////////
 
+
 //Variables:
 //create array of level 1 menu items that have sub-menus
 let levelOneArr = Array.from(document.querySelectorAll('.flex-nav__has-sub-menu')),
@@ -68,6 +69,7 @@ document.addEventListener('click', function (event) {
 let modalButtonArray = Array.from(document.querySelectorAll('.modal-button--open'));
 let modalsArray = Array.from(document.querySelectorAll('.modal'));
 let modalButtonClose = Array.from(document.querySelectorAll('.modal-button--close'));
+let modalPrintButton = Array.from(document.querySelectorAll('.modal__print-button'))
 let modalButtonClicked;
 
 
@@ -84,7 +86,40 @@ modalButtonArray.forEach(item => {
 
 
 modalButtonClose.forEach(item => {
+//    let modalsArray = Array.from(document.querySelectorAll('.modal'));
     item.addEventListener('click', () => {
         modalsArray[modalButtonClicked].classList.add('modal--hidden');
     });
 });
+
+
+//PRINTING MODALS
+
+modalPrintButton.forEach(item => {
+//    let modalsArray = Array.from(document.querySelectorAll('.modal'));
+    item.addEventListener('click', () => {
+        modalsArray[modalButtonClicked].classList.add('printThis');
+        printContent();
+    });
+});
+
+function printContent() {
+    var restorepage = document.body.innerHTML;
+    var printcontent = document.querySelector('.printThis').innerHTML;
+    document.body.innerHTML = printcontent;
+    window.print();
+    document.body.innerHTML = restorepage;
+    //reload the page so the event listeners are reset.
+    location.reload();
+}
+
+//PRINTING
+//function printContent(el) {
+//    var restorepage = document.body.innerHTML;
+//    var printcontent = document.getElementById(el).innerHTML;
+//    document.body.innerHTML = printcontent;
+//    window.print();
+//    document.body.innerHTML = restorepage;
+//    //reload the page so the event listeners are reset.
+//    location.reload();
+//}
