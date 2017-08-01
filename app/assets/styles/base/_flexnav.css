@@ -1,0 +1,142 @@
+/******************COMMENT BLOCK FOR SEPARATION IN COMPILED CSS DOC******************/
+
+
+/************************************************************************************/
+
+
+/***********************************FLEXNAV******************************************/
+
+
+/************************************************************************************/
+
+
+/************************************************************************************/
+
+.flexnav {
+    width: 100%;
+    max-height: 145px;
+    background: lightblue;
+    border: 3px solid black;
+    align-items: center;
+    justify-content: space-around;
+    @mixin atLarge {
+        position: fixed;
+    }
+    li {
+        list-style: none;
+    }
+    p {
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    &__logo {
+        max-height: 140px;
+    }
+    &__title {
+        display: none;
+        margin: 0;
+        /*        min-width: 255px;*/
+        color: purple;
+        /*        media query to fix bug in mobile view navbar where it collapses into itself between a small specific screen size when the submenu is showing*/
+        /*
+        @media all and (min-width: 475px) {
+            display: inline-block;
+        }
+*/
+        @mixin atSmall {
+            display: inline-block;
+        }
+    }
+    &__toptab-ul {
+        display: none;
+        flex-direction: column;
+        background-color: pink;
+        color: black;
+        text-align: center;
+        /*        flex-grow: 1;*/
+        padding: 0;
+        margin: 0;
+        li {
+            border: 1px solid grey;
+            /*            padding: 5px 0 5px 0;*/
+        }
+        @mixin atLarge {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: lightblue;
+            flex: 1;
+            /*            flex: 1 5 550px;*/
+            li {
+                border: none;
+            }
+        }
+    }
+    &__toptab-li {
+        /*        display: inline-block;*/
+        height: auto;
+    }
+    &__toptab-p {
+        cursor: pointer;
+        color: red;
+        letter-spacing: 2px;
+        padding: 20px 5px;
+    }
+    &__submenu {
+        display: none;
+        border: 2px solid black;
+        background: lightblue;
+        padding-left: 0;
+        li {
+            padding: 20px 5px;
+        }
+        @mixin atLarge {
+            position: absolute;
+        }
+    }
+    &__toggler {
+        font-size: 5rem;
+        cursor: pointer;
+        @mixin atLarge {
+            display: none;
+        }
+    }
+}
+
+
+/* Creates On-hover Dropdown Sub-menus for desktop view.
+Using the Adjancent Sibling Combinator selector '+' */
+
+
+/* Works on mobiles with touch and 'stylus hover' */
+
+
+/*@media all and (min-width: 1024px) {*/
+
+.flexnav__toptab-p:hover+ul {
+    display: block;
+}
+
+.flexnav__submenu:hover {
+    display: block;
+}
+
+
+/*}*/
+
+
+/*Class toggled to 'flexnav__toptab-ul' by javascript when the dropdown 'toggler' is clicked*/
+
+.mobile-nav-revealer {
+    display: flex;
+}
+
+
+/*Class toggled to 'flexnav__submenu' by javascript when the 'flexnav__toptab-p' is clicked*/
+
+.sub-menu-revealer {
+    display: block;
+}
