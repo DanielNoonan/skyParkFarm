@@ -773,9 +773,12 @@ a:hover {
 
 /************************************************************************************/
 
+.flexnav__wrapper {
+    height: 145px;
+}
+
 .flexnav {
     width: 100%;
-    max-height: 145px;
     background: lightblue;
     border: 3px solid black;
     -webkit-box-align: center;
@@ -805,7 +808,7 @@ a:hover {
     }
 
 .flexnav__logo {
-        max-height: 140px;
+        height: 140px;
     }
 
 .flexnav__title {

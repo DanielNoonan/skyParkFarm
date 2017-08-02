@@ -12,9 +12,12 @@
 
 /************************************************************************************/
 
+.flexnav__wrapper {
+    height: 145px;
+}
+
 .flexnav {
     width: 100%;
-    max-height: 145px;
     background: lightblue;
     border: 3px solid black;
     align-items: center;
@@ -32,7 +35,7 @@
         text-decoration: none;
     }
     &__logo {
-        max-height: 140px;
+        height: 140px;
     }
     &__title {
         display: none;
