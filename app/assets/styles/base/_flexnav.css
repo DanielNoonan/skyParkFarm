@@ -18,7 +18,7 @@
 
 .flexnav {
     width: 100%;
-    background: lightblue;
+    background: $dnwBlue;
     border-top: 3px solid $spfBlue;
     border-bottom: 3px solid $spfBlue;
     align-items: center;
@@ -30,19 +30,39 @@
         list-style: none;
     }
     p {
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: $spfGold;
         margin: 0;
     }
     a {
-        text-decoration: none;
+        color: $spfGold;
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 5%;
+        transition: all 0.1s;
+    }
+    a:hover {
+        color: white;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
     &__logo {
-        height: 140px;
+        margin: 5px 0;
+        max-height: 130px;
     }
     &__title {
+        font-size: 3.5rem;
         display: none;
         margin: 0;
         /*        min-width: 255px;*/
-        color: purple;
+        color: $spfGold;
         /*        media query to fix bug in mobile view navbar where it collapses into itself between a small specific screen size when the submenu is showing*/
         /*
         @media all and (min-width: 475px) {
@@ -72,7 +92,7 @@
             position: relative;
             flex-direction: row;
             justify-content: space-around;
-            background-color: lightblue;
+            background-color: $dnwBlue;
             flex: 1;
             /*            flex: 1 5 550px;*/
             li {
@@ -93,7 +113,7 @@
     &__submenu {
         display: none;
         border: 2px solid black;
-        background: lightblue;
+        background: $dnwBlue;
         padding-left: 0;
         li {
             padding: 20px 5px;
