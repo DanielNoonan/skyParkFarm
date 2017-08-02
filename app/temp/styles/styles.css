@@ -780,7 +780,8 @@ a:hover {
 .flexnav {
     width: 100%;
     background: lightblue;
-    border: 3px solid black;
+    border-top: 3px solid #80D4F7;
+    border-bottom: 3px solid #80D4F7;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
