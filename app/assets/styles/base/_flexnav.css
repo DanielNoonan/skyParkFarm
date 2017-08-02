@@ -50,6 +50,7 @@
         }
     }
     &__toptab-ul {
+        z-index: 999;
         display: none;
         flex-direction: column;
         background-color: pink;

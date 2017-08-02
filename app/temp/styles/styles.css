@@ -830,6 +830,7 @@ a:hover {
     }
 
 .flexnav__toptab-ul {
+        z-index: 999;
         display: none;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
