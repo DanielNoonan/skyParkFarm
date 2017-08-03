@@ -780,6 +780,8 @@ a:hover {
 }
 
 .flexnav {
+    position: relative;
+    z-index: 999;
     width: 100%;
     background: #000034;
     border-top: 3px solid #80D4F7;
@@ -800,34 +802,52 @@ a:hover {
 
 .flexnav li {
         list-style: none;
+        min-width: 150px;
     }
 
-.flexnav p {
+.flexnav__toptab-p {
+        color: #BC7817;
         font-size: 1.6rem;
         font-weight: 700;
         letter-spacing: 2px;
-        color: #BC7817;
+        padding: 20px 5px;
         margin: 0;
+        cursor: pointer;
+    }
+
+.flexnav__toptab-p:hover {
+        color: white;
     }
 
 .flexnav a {
-        color: #BC7817;
+        width: 100%;
+        display: inline-block;
+        color: silver;
         font-size: 1.6rem;
         letter-spacing: 2px;
         font-weight: 700;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        border-radius: 5%;
-        -webkit-transition: all 0.1s;
-        transition: all 0.1s;
+        /*border-radius: 5%;*/
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
     }
 
+@media (min-width: 1024px) {
+
+.flexnav a {    
+            padding-top: 5px;
+            padding-bottom: 10px
+    }
+    }
+
+@media (min-width: 1024px) {
+
 .flexnav a:hover {
-        color: white;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
-        padding-top: 20px;
-        padding-bottom: 20px;
+            color: white;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            padding-top: 20px;
+            padding-bottom: 20px
+    }
     }
 
 .flexnav__logo {
@@ -858,28 +878,29 @@ a:hover {
     }
 
 .flexnav__toptab-ul {
-        z-index: 999;
+        z-index: 1;
         display: none;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        background-color: pink;
-        color: black;
         text-align: center;
+        background-color: #000034;
+        border-top: 3px solid #80D4F7;
         /*        flex-grow: 1;*/
         padding: 0;
         margin: 0;
     }
 
-.flexnav__toptab-ul li {
+/* li {
             border: 1px solid grey;
-            /*            padding: 5px 0 5px 0;*/
-        }
+                        padding: 5px 0 5px 0;
+        }*/
 
 @media (min-width: 1024px) {
 
 .flexnav__toptab-ul {
+            border-top: none;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -890,7 +911,6 @@ a:hover {
                     flex-direction: row;
             -ms-flex-pack: distribute;
                 justify-content: space-around;
-            background-color: #000034;
             -webkit-box-flex: 1;
                 -ms-flex: 1;
                     flex: 1
@@ -903,21 +923,16 @@ a:hover {
 
 .flexnav__toptab-li {
         /*        display: inline-block;*/
-        height: auto;
-    }
-
-.flexnav__toptab-p {
-        cursor: pointer;
-        color: red;
-        letter-spacing: 2px;
-        padding: 20px 5px;
+        /*height: auto;*/
+        /*position: relative;*/
     }
 
 .flexnav__submenu {
         display: none;
-        border: 2px solid black;
+        border: 1px solid white;
         background: #000034;
-        padding-left: 0;
+        /*padding-left: 0;*/
+        padding: 0;
     }
 
 .flexnav__submenu li {
@@ -932,6 +947,7 @@ a:hover {
     }
 
 .flexnav__toggler {
+        color: #BC7817;
         font-size: 5rem;
         cursor: pointer;
     }
