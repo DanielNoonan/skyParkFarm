@@ -866,6 +866,7 @@ a:hover {
     }
 
 .flexnav__title {
+        width: 100%;
         font-size: 3.5rem;
         display: none;
         margin: 0;
@@ -967,8 +968,9 @@ a:hover {
 
 .flexnav__toggler {
         color: #BC7817;
-        font-size: 5rem;
+        font-size: 8rem;
         cursor: pointer;
+        margin: 0;
     }
 
 @media (min-width: 1024px) {

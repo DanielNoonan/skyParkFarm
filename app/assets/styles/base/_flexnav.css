@@ -79,6 +79,7 @@
         max-height: 130px;
     }
     &__title {
+        width: 100%;
         font-size: 3.5rem;
         display: none;
         margin: 0;
@@ -146,8 +147,9 @@
     }
     &__toggler {
         color: $spfGold;
-        font-size: 5rem;
+        font-size: 8rem;
         cursor: pointer;
+        margin: 0;
         @mixin atLarge {
             display: none;
         }
