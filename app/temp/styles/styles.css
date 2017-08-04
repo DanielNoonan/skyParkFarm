@@ -869,7 +869,7 @@ a:hover {
         width: 100%;
         font-size: 3.5rem;
         display: none;
-        margin: 0;
+        margin: 0 130px 0 0;
         /*        min-width: 255px;*/
         color: #BC7817;
         /*        media query to fix bug in mobile view navbar where it collapses into itself between a small specific screen size when the submenu is showing*/
