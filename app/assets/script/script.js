@@ -23,10 +23,10 @@ const toggleButtonState = () => {
 
 //Closes the submenus: Is called from MOBILE TOGGLER above & from the 'Submenus open on click for smaller screens' javaScript media query below.
 const closeSubMenus = () => {
-        levelTwoArr.forEach(levelTwo => {
-            levelTwo.classList.remove('js--submenu-revealer');
-        });
-    }
+    levelTwoArr.forEach(levelTwo => {
+        levelTwo.classList.remove('js--submenu-revealer');
+    });
+}
 
 
 
@@ -56,14 +56,18 @@ document.addEventListener('click', function (event) {
 //Also it removes the '.mobile-nav-revealer' class from the '.flexnav__toptab-ul'.
 //By doing this the state of the submenu and toggle button are 'reset' so it's not left open if someone is e.g. dragging the side of the browser window between small and large width repeatedly while the mobile submenu is open (now it will close automatically on screen resize).
 
-let mq = window.matchMedia('(min-width: 1024px)');
+// let mq = window.matchMedia('(min-width: 1024px)');
 
-mq.addListener((changed) => {
-    if (changed.matches) {
-        document.querySelector('.flexnav__toggler').innerHTML = '&#43;';
-        document.querySelector('.flexnav__toptab-ul').classList.remove('js--mobile-nav-revealer');
-    }
-});
+// mq.addListener((changed) => {
+//     if (changed.matches) {
+//         document.querySelector('.flexnav__toggler').innerHTML = '&#43;';
+//         document.querySelector('.flexnav__toptab-ul').classList.remove('js--mobile-nav-revealer');
+//     }
+// });
+
+
+
+
 
 
 
@@ -77,16 +81,24 @@ mq.addListener((changed) => {
 // 2). To the <ul> with class flexnav__submenu add this class: js--flexnav__submenu
 
 
-    //Variables:
-    //create array of all top tier menu items
-    let topTab = Array.from(document.querySelectorAll('.js-flexnav__toptab-li')),
-    //create array of level 1 menu items that have sub-menus
-        levelOneArr = Array.from(document.querySelectorAll('.js--has-submenu')),
-        //create array of level 2 sub-menus
-        levelTwoArr = Array.from(document.querySelectorAll('.js--flexnav__submenu'));
+//Variables:
+//create array of all top tier menu items
+let topTab = Array.from(document.querySelectorAll('.js-flexnav__toptab-li')),
+//create array of level 1 menu items that have sub-menus
+    levelOneArr = Array.from(document.querySelectorAll('.js--has-submenu')),
+    //create array of level 2 sub-menus
+    levelTwoArr = Array.from(document.querySelectorAll('.js--flexnav__submenu'));
 
-if (window.matchMedia("(max-width: 1023px)").matches) {
+// if (window.matchMedia("(max-width: 1023px)").matches) {
+let subMenu;
+// const clickToOpen = () => {
+// console.log(subMenu);
+//             //open/reveal the level 2 sub-menu
+//             subMenu.classList.toggle('js--submenu-revealer');
+// }
+
     ////////////////
+const clickTab = () => {
     //iterate over the array of all top tier menu items
     topTab.forEach(item => {
         //add event listeners to each of them
@@ -98,6 +110,23 @@ if (window.matchMedia("(max-width: 1023px)").matches) {
         });
     });
 
+
+    levelOneArr.forEach(item => {
+        //store the array index of the level 1 item clicked
+            let index = levelOneArr.indexOf(item);
+            //store the level 2 sub-menu that corresponds to the same array index value and the index value of the level 1 array that was clicked
+            subMenu = levelTwoArr[index];
+            //iterate over the level 2 sub-menu array and close any that are open - before the next step of openning the one clicked
+            levelTwoArr.forEach(item => {
+                if (item.classList.contains('js--submenu-revealer') && levelTwoArr.indexOf(item) != index) {
+                    item.classList.remove('js--submenu-revealer');
+                }
+            });
+        // //add event listeners to each of them
+        // item.addEventListener('click', clickToOpen);
+        subMenu.classList.toggle('js--submenu-revealer');
+    });
+}
     // const closeSubMenus = () => {
     //     levelTwoArr.forEach(levelTwo => {
     //         levelTwo.classList.remove('js--submenu-revealer');
@@ -106,24 +135,34 @@ if (window.matchMedia("(max-width: 1023px)").matches) {
 
     ////////////////
     //iterate over the array of level 1 items that have sub-menus
-    levelOneArr.forEach(item => {
-        //add event listeners to each of them
-        item.addEventListener('click', () => {
-            //store the array index of the level 1 item clicked
-            let index = levelOneArr.indexOf(item);
-            //store the level 2 sub-menu that corresponds to the same array index value and the index value of the level 1 array that was clicked
-            let subMenu = levelTwoArr[index];
-            //iterate over the level 2 sub-menu array and close any that are open - before the next step of openning the one clicked
-            levelTwoArr.forEach(item => {
-                if (item.classList.contains('js--submenu-revealer') && levelTwoArr.indexOf(item) != index) {
-                    item.classList.remove('js--submenu-revealer');
-                }
-            });
-            //open/reveal the level 2 sub-menu
-            subMenu.classList.toggle('js--submenu-revealer');
-        });
-    });
-}
+
+
+    
+
+
+// }
+
+
+
+let mq = window.matchMedia('(min-width: 1024px)');
+
+mq.addListener((changed) => {
+    if (changed.matches) {
+        document.querySelector('.flexnav__toggler').innerHTML = '&#43;';
+        document.querySelector('.flexnav__toptab-ul').classList.remove('js--mobile-nav-revealer');
+        closeSubMenus();
+    }
+    if(window.matchMedia("(max-width: 1023px)").matches) {
+            clickTab();
+        } else {
+            
+        }
+});
+
+if(window.matchMedia("(max-width: 1023px)").matches) {
+            clickTab();
+            console.log('poop');
+        }
 
 ////////////////
 //Closes any open sub-menus if anywhere outside of the nav menu list is clicked
