@@ -127,6 +127,10 @@ const clickTab = () => {
     });
 }
 
+if(window.matchMedia("(max-width: 1023px)").matches) {
+    clickTab();
+}
+
 
 let mq = window.matchMedia('(min-width: 1024px)');
 
