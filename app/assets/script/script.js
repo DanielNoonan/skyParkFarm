@@ -38,7 +38,7 @@ const closeSubMenus = () => {
 
 let flexNavUnorderedList = document.querySelector('.flexnav');
 
-document.addEventListener('touchstart', function (event) {
+document.addEventListener('click', function (event) {
     let isClickInside = flexNavUnorderedList.contains(event.target);
     if (!isClickInside) {
         document.querySelector('.flexnav__toggler').innerHTML = '&#43;';
