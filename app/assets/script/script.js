@@ -62,6 +62,7 @@ mq.addListener((changed) => {
     if (changed.matches) {
         document.querySelector('.flexnav__toggler').innerHTML = '&#43;';
         document.querySelector('.flexnav__toptab-ul').classList.remove('js--mobile-nav-revealer');
+        closeSubMenus();
     }
 });
 
