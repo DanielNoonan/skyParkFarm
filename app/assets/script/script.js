@@ -56,15 +56,15 @@ document.addEventListener('touchstart', function (event) {
 //Also it removes the '.mobile-nav-revealer' class from the '.flexnav__toptab-ul'.
 //By doing this the state of the submenu and toggle button are 'reset' so it's not left open if someone is e.g. dragging the side of the browser window between small and large width repeatedly while the mobile submenu is open (now it will close automatically on screen resize).
 
-let mq = window.matchMedia('(min-width: 1024px)');
+// let mq = window.matchMedia('(min-width: 1024px)');
 
-mq.addListener((changed) => {
-    if (changed.matches) {
-        document.querySelector('.flexnav__toggler').innerHTML = '&#43;';
-        document.querySelector('.flexnav__toptab-ul').classList.remove('js--mobile-nav-revealer');
-        closeSubMenus();
-    }
-});
+// mq.addListener((changed) => {
+//     if (changed.matches) {
+//         document.querySelector('.flexnav__toggler').innerHTML = '&#43;';
+//         document.querySelector('.flexnav__toptab-ul').classList.remove('js--mobile-nav-revealer');
+//         closeSubMenus();
+//     }
+// });
 
 
 
@@ -86,8 +86,9 @@ mq.addListener((changed) => {
         //create array of level 2 sub-menus
         levelTwoArr = Array.from(document.querySelectorAll('.js--flexnav__submenu'));
 
-if (window.matchMedia("(max-width: 1023px)").matches) {
+// if (window.matchMedia("(max-width: 1023px)").matches) {
     ////////////////
+const clickTab = () => {
     //iterate over the array of all top tier menu items
     topTab.forEach(item => {
         //add event listeners to each of them
@@ -125,6 +126,26 @@ if (window.matchMedia("(max-width: 1023px)").matches) {
         });
     });
 }
+
+
+let mq = window.matchMedia('(min-width: 1024px)');
+
+mq.addListener((changed) => {
+    if (changed.matches) {
+        document.querySelector('.flexnav__toggler').innerHTML = '&#43;';
+        document.querySelector('.flexnav__toptab-ul').classList.remove('js--mobile-nav-revealer');
+        closeSubMenus();
+    }
+    //The below conditional makes sure that only javaScript click events are active for narrow screens and only CSS hover events are active for wider screens if a user transitions between narrow and wide screen views, e.g. changing orientation of a tablet between portrait and landscape.
+    if(window.matchMedia("(max-width: 1023px)").matches) {
+        //This calls the below function so that he click event handlers are set if a user transitions from a wider screen (landscape) to a narrow screen (portrait).
+            clickTab();
+        } else {
+            //replaces the page with fresh version of itself(i.e. no event listeners). Does not create a 'history' entry so the browser 'back' button doesn't undo this. Replacement is from browser cache so happens fast. This is necessary so that the click event listeners are nolonger functioning if a user transitions from a narrow screen (portrait) to a wider screen (landscape).
+            window.location.replace(window.location.pathname + window.location.search + window.location.hash);
+        }
+});
+
 
 ////////////////
 //Closes any open sub-menus if anywhere outside of the nav menu list is clicked
