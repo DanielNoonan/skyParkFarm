@@ -138,11 +138,11 @@ mq.addListener((changed) => {
     }
     //The below conditional makes sure that only javaScript click events are active for narrow screens and only CSS hover events are active for wider screens if a user transitions between narrow and wide screen views, e.g. changing orientation of a tablet between portrait and landscape.
     if(window.matchMedia("(max-width: 1023px)").matches) {
-        //This calls the below function so that he click event handlers are set if a user transitions from a wider screen (landscape) to a narrow screen (portrait).
+        //This calls the below function so that the click event handlers are set if a user transitions from a wider screen (landscape - where there are no click events on the navbar) to a narrow screen (portrait - where there should be click events on the navbar).
             clickTab();
-        } else {
-            //replaces the page with fresh version of itself(i.e. no event listeners). Does not create a 'history' entry so the browser 'back' button doesn't undo this. Replacement is from browser cache so happens fast. This is necessary so that the click event listeners are nolonger functioning if a user transitions from a narrow screen (portrait) to a wider screen (landscape).
-            window.location.replace(window.location.pathname + window.location.search + window.location.hash);
+        } else if(window.matchMedia("(min-width: 1024px)").matches) {
+            //This reloads the page so the event listeners are reset i.e. there are none on the navbar for wider screens.
+            location.reload();
         }
 });
 
