@@ -127,6 +127,7 @@ const clickTab = () => {
     });
 }
 
+//add click events
 if(window.matchMedia("(max-width: 1023px)").matches) {
     clickTab();
 }

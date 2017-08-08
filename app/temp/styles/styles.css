@@ -779,6 +779,13 @@ a:hover {
     height: 145px;
 }
 
+@media (min-width: 1024px) and (max-width: 1144px) {
+
+.flexnav__wrapper {
+        height: 190px
+}
+    }
+
 .flexnav {
     position: relative;
     z-index: 999;
@@ -828,7 +835,7 @@ a:hover {
         color: white;
     }
 
-.flexnav a {
+.flexnav__link {
         width: 100%;
         display: inline-block;
         color: silver;
@@ -842,7 +849,7 @@ a:hover {
 
 @media (min-width: 1024px) {
 
-.flexnav a {
+.flexnav__link {
             font-size: 1.6rem;
             padding-top: 5px;
             padding-bottom: 10px
@@ -851,7 +858,7 @@ a:hover {
 
 @media (min-width: 1024px) {
 
-.flexnav a:hover {
+.flexnav__link:hover {
             color: white;
             border-top: 1px solid white;
             border-bottom: 1px solid white;
@@ -860,9 +867,35 @@ a:hover {
     }
     }
 
+/*a:hover {
+        @mixin atLarge {
+            color: white;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }*/
+
 .flexnav__hometab {
         color: #BC7817;
     }
+
+/*a {
+        width: 100%;
+        display: inline-block;
+        color: silver;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+        border-radius: 5%;
+        transition: all 0.3s;
+        @mixin atLarge {
+            font-size: 1.6rem;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+    }*/
 
 .flexnav__logo {
         display: none;
@@ -892,7 +925,7 @@ a:hover {
     }
 
 .flexnav__title {
-        font-size: 3.5rem;
+        font-size: 4rem;
         display: none;
         margin: 0;
         /*        min-width: 255px;*/
@@ -906,7 +939,7 @@ a:hover {
 */
 
 .flexnav__title-wrapper {
-            text-align: center;
+            /*text-align: center;*/
             -ms-flex-pack: distribute;
                 justify-content: space-around;
             -webkit-box-align: center;
@@ -942,6 +975,7 @@ a:hover {
 @media (min-width: 1024px) {
 
 .flexnav__title {
+            font-size: 6rem;
             margin-right: 14%
     }
     }

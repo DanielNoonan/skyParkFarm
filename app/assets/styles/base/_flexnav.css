@@ -14,6 +14,9 @@
 
 .flexnav__wrapper {
     height: 145px;
+    @media (min-width: 1024px) and (max-width: 1144px) {
+        height: 190px;
+    }
 }
 
 .flexnav {
@@ -49,7 +52,7 @@
     &__toptab-p:hover {
         color: white;
     }
-    a {
+    &__link {
         width: 100%;
         display: inline-block;
         color: silver;
@@ -64,8 +67,7 @@
             padding-bottom: 10px;
         }
     }
-
-    a:hover {
+    &__link:hover {
         @mixin atLarge {
             color: white;
             border-top: 1px solid white;
@@ -74,6 +76,31 @@
             padding-bottom: 20px;
         }
     }
+    /*a {
+        width: 100%;
+        display: inline-block;
+        color: silver;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+        border-radius: 5%;
+        transition: all 0.3s;
+        @mixin atLarge {
+            font-size: 1.6rem;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+    }*/
+
+    /*a:hover {
+        @mixin atLarge {
+            color: white;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }*/
     &__hometab {
         color: $spfGold;
     }
@@ -94,7 +121,7 @@
         }
     }
     &__title {
-        font-size: 3.5rem;
+        font-size: 4rem;
         display: none;
         margin: 0;
         /*        min-width: 255px;*/
@@ -106,7 +133,7 @@
         }
 */
         &-wrapper {
-            text-align: center;
+            /*text-align: center;*/
             justify-content: space-around;
             align-items: center;
         }
@@ -125,6 +152,7 @@
             display: inline-block;
         }
         @mixin atLarge {
+            font-size: 6rem;
             margin-right: 14%;
         }
     }
