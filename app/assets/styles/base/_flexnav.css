@@ -75,8 +75,20 @@
         }
     }
     &__logo {
+        display: none;
         margin: 5px 0;
-        max-height: 130px;
+        width: 130px;
+        /*align-self: flex-start;*****needed????*******************/
+        @mixin atLarge {
+            display: block;
+        }
+        &--submenu {
+            margin: 5px 0;
+            width: 130px;
+            @mixin atLarge {
+                display: none;
+            }
+        }
     }
     &__title {
         font-size: 3.5rem;
@@ -90,6 +102,22 @@
             display: inline-block;
         }
 */
+        &-wrapper {
+            text-align: center;
+            justify-content: space-around;
+            align-items: center;
+        }
+        &-bottom-border {
+            top: 140px;
+            left: 0px;
+            position: absolute;
+            height: 0;
+            width: 100%;
+            border-top: 3px solid $spfBlue;
+            @mixin atLarge {
+                display: none;
+            }
+        }
         @mixin atSmall {
             display: inline-block;
         }
@@ -100,7 +128,7 @@
         flex-direction: column;
         text-align: center;
         background-color: $dnwBlue;
-        border-top: 3px solid $spfBlue;
+        /*border-top: 3px solid $spfBlue;*/
         /*        flex-grow: 1;*/
         padding: 0;
         margin: 0;
@@ -145,8 +173,10 @@
         }
     }
     &__toggler {
+        margin: 0;
+        display: inline-block;
         color: $spfGold;
-        font-size: 5rem;
+        font-size: 10rem;
         cursor: pointer;
         @mixin atLarge {
             display: none;

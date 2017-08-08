@@ -861,8 +861,30 @@ a:hover {
     }
 
 .flexnav__logo {
+        display: none;
         margin: 5px 0;
-        max-height: 130px;
+        width: 130px;
+    }
+
+/*align-self: flex-start;*****needed????*******************/
+
+@media (min-width: 1024px) {
+
+.flexnav__logo {
+            display: block
+    }
+    }
+
+.flexnav__logo--submenu {
+            margin: 5px 0;
+            width: 130px;
+        }
+
+@media (min-width: 1024px) {
+
+.flexnav__logo--submenu {
+                display: none
+        }
     }
 
 .flexnav__title {
@@ -871,7 +893,6 @@ a:hover {
         margin: 0;
         /*        min-width: 255px;*/
         color: #BC7817;
-        /*        media query to fix bug in mobile view navbar where it collapses into itself between a small specific screen size when the submenu is showing*/
     }
 
 /*
@@ -879,6 +900,33 @@ a:hover {
             display: inline-block;
         }
 */
+
+.flexnav__title-wrapper {
+            text-align: center;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+        }
+
+/*        media query to fix bug in mobile view navbar where it collapses into itself between a small specific screen size when the submenu is showing*/
+
+.flexnav__title-bottom-border {
+            top: 140px;
+            left: 0px;
+            position: absolute;
+            height: 0;
+            width: 100%;
+            border-top: 3px solid #80D4F7;
+        }
+
+@media (min-width: 1024px) {
+
+.flexnav__title-bottom-border {
+                display: none
+        }
+    }
 
 @media (min-width: 640px) {
 
@@ -896,7 +944,7 @@ a:hover {
                 flex-direction: column;
         text-align: center;
         background-color: #000034;
-        border-top: 3px solid #80D4F7;
+        /*border-top: 3px solid $spfBlue;*/
         /*        flex-grow: 1;*/
         padding: 0;
         margin: 0;
@@ -966,8 +1014,10 @@ a:hover {
     }
 
 .flexnav__toggler {
+        margin: 0;
+        display: inline-block;
         color: #BC7817;
-        font-size: 5rem;
+        font-size: 10rem;
         cursor: pointer;
     }
 
