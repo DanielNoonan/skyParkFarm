@@ -860,6 +860,10 @@ a:hover {
     }
     }
 
+.flexnav__hometab {
+        color: #BC7817;
+    }
+
 .flexnav__logo {
         display: none;
         margin: 5px 0;
@@ -932,6 +936,13 @@ a:hover {
 
 .flexnav__title {
             display: inline-block
+    }
+    }
+
+@media (min-width: 1024px) {
+
+.flexnav__title {
+            margin-right: 14%
     }
     }
 

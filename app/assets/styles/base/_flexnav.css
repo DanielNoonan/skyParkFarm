@@ -74,6 +74,9 @@
             padding-bottom: 20px;
         }
     }
+    &__hometab {
+        color: $spfGold;
+    }
     &__logo {
         display: none;
         margin: 5px 0;
@@ -120,6 +123,9 @@
         }
         @mixin atSmall {
             display: inline-block;
+        }
+        @mixin atLarge {
+            margin-right: 14%;
         }
     }
     &__toptab-ul {

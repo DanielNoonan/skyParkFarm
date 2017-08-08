@@ -10,81 +10,111 @@
 
 <body>
     <!--    Nav-bar-->
-    <div class="flex-nav-wrapper">
-        <nav class="flex-nav">
-            <div class="flex-nav__brand-div">
-                <a href="index.html" class="flex-nav__logo">
-                    <img src="assets/images/BlueCircle%20Logo%20-%203.png">
-                </a>
-                <h1 class="flex-nav__title">SKY PARK FARM</h1>
-                <!--The LABEL is set so that it will effect the element with ID toggle - in this case a checkbox. So clicking this LABEL will activate that CHECKBOX-->
-                <!--                        <label for="toggle">&#9776;</label>-->
-                <label for="toggle">&#43;</label>
+    <nav class="flexnav__wrapper">
+        <div class="row flexnav">
+            <!-- img here when mobile submenu closed -->
+            <img class="flexnav__logo" src="assets/images/BlueCircle%20Logo%20-%203.png" alt="Logo">
+            <div class="small-10"><!--this keeps the logo on the left-->
+                <div class="row small-12 flexnav__title-wrapper">
+                        <!-- img here when mobile submenu is open -->
+                    <img class="flexnav__logo--submenu" src="assets/images/BlueCircle%20Logo%20-%203.png" alt="Logo">
+                    <h1 class="flexnav__title">SKY PARK FARM</h1>
+                    <p class="flexnav__toggler">&#43;</p>
+                </div>
+                <div class="flexnav__title-bottom-border"></div><!--fakes a 100% width bottom border for the title on smaller screens-->
+                <div class="small-12">
+                    <ul class="row small-12 flexnav__toptab-ul">
+                        <li class="flexnav__toptab-li js--has-submenu js--flexnav__toptab-li">
+                            <p class="flexnav__toptab-p">ABOUT US</p>
+                            <ul class="flexnav__submenu js--flexnav__submenu">
+                                <li>
+                                    <a href="#">THE FUTURE</a>
+                                </li>
+                                <li>
+                                    <a href="#">TODAY</a>
+                                </li>
+                                <li>
+                                    <a href="about-history.html">HISTORY</a>
+                                </li>
+                                <li>
+                                    <a href="#">THEN &amp; NOW</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="flexnav__toptab-li js--has-submenu js--flexnav__toptab-li"">
+                            <p class="flexnav__toptab-p">NEWS</p>
+                            <ul class="flexnav__submenu js--flexnav__submenu">
+                                <li>
+                                    <a href="#">LATEST</a>
+                                </li>
+                                <li>
+                                    <a href="#">PRESS COVERAGE</a>
+                                </li>
+                                <li>
+                                    <a href="#">PHOTO GALLERY</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="flexnav__toptab-li js--has-submenu js--flexnav__toptab-li">
+                            <p class="flexnav__toptab-p">THE TEAM</p>
+                            <ul class="flexnav__submenu js--flexnav__submenu">
+                                <li>
+                                    <a href="#">THE OWNERS</a>
+                                </li>
+                                <li>
+                                    <a href="#">ESTATE MANAGER</a>
+                                </li>
+                                <li>
+                                    <a href="#">RANGER</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="flexnav__toptab-li js--has-submenu js--flexnav__toptab-li">
+                            <p class="flexnav__toptab-p">DEER FARM</p>
+                            <ul class="flexnav__submenu js--flexnav__submenu">
+                                <li>
+                                    <a href="#">HOW IT WORKS</a>
+                                </li>
+                                <li>
+                                    <a href="#">RED DEER</a>
+                                </li>
+                                <li>
+                                    <a href="#">VENISON &amp; HEALTH</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="flexnav__toptab-li js--has-submenu js--flexnav__toptab-li">
+                            <p class="flexnav__toptab-p">ACCOMMODATION</p>
+                            <ul class="flexnav__submenu js--flexnav__submenu">
+                                <li>
+                                    <a href="#">QUEBEC COTTAGE</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="flexnav__toptab-li js--has-submenu js--flexnav__toptab-li">
+                            <p class="flexnav__toptab-p">CONTACT</p>
+                            <ul class="flexnav__submenu js--flexnav__submenu">
+                                <li>
+                                    <a href="#">MAP &amp; EMAIL</a>
+                                </li>
+                            </ul>
+                        </li>
+                                        <!--
+                        <li class="social">
+                            <a href="https://twitter.com" class="flex-nav__link"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="social">
+                            <a href="https://www.facebook.com/" class="flex-nav__link"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="social">
+                            <a href="https://www.instagram.com" class="flex-nav__link"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        -->
+                    </ul>
+                </div>
             </div>
-            <input type="checkbox" id="toggle">
-            <ul class="js__click-outside-to-close toggle-me flex-nav__ul-level-1">
-                <li class="js-top-tier">
-                    <a href="index.html" class="flex-nav__link">HOME</a>
-                </li>
-                <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
-                    <a class="flex-nav__link">ABOUT US</a>
-                    <ul class="flex-nav__ul-level-2 js-hide-sub-menu" onmouseleave="closeSubMenus()">
-                        <li><a href="#" class="flex-nav__link">THE FUTURE</a></li>
-                        <li><a href="#" class="flex-nav__link">TODAY</a></li>
-                        <li><a href="#" class="flex-nav__link">HISTORY</a></li>
-                        <li><a href="#" class="flex-nav__link">THEN &amp; NOW</a></li>
-                    </ul>
-                </li>
-                <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
-                    <a class="flex-nav__link">NEWS</a>
-                    <ul class="flex-nav__ul-level-2 js-hide-sub-menu">
-                        <li><a href="#" class="flex-nav__link">LATEST</a></li>
-                        <li><a href="#" class="flex-nav__link">PRESS COVERAGE</a></li>
-                        <li><a href="#" class="flex-nav__link">PHOTO GALLERY</a></li>
-                    </ul>
-                </li>
-                <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
-                    <a href="#" class="flex-nav__link">THE TEAM</a>
-                    <ul class="flex-nav__ul-level-2 js-hide-sub-menu">
-                        <li><a href="#" class="flex-nav__link">THE OWNERS</a></li>
-                        <li><a href="#" class="flex-nav__link">ESTATE MANAGER</a></li>
-                        <li><a href="#" class="flex-nav__link">RANGER</a></li>
-                    </ul>
-                </li>
-                <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
-                    <a href="#" class="flex-nav__link">DEER FARM</a>
-                    <ul class="flex-nav__ul-level-2 js-hide-sub-menu">
-                        <li><a href="#" class="flex-nav__link">HOW IT WORKS</a></li>
-                        <li><a href="#" class="flex-nav__link">RED DEER</a></li>
-                        <li><a href="#" class="flex-nav__link">VENISON &amp; HEALTH</a></li>
-                    </ul>
-                </li>
-                <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
-                    <a href="#" class="flex-nav__link">ACCOMMODATION</a>
-                    <ul class="flex-nav__ul-level-2 js-hide-sub-menu">
-                        <li><a href="#" class="flex-nav__link">QUEBEC COTTAGE</a></li>
-                    </ul>
-                </li>
-                <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
-                    <a href="#" class="flex-nav__link">CONTACT</a>
-                    <ul class="flex-nav__ul-level-2 js-hide-sub-menu">
-                        <li><a href="#" class="flex-nav__link">MAP &amp; EMAILS</a></li>
-                    </ul>
-                </li>
-                <!--
-<li class="social">
-    <a href="https://twitter.com" class="flex-nav__link"><i class="fa fa-twitter"></i></a>
-</li>
-<li class="social">
-    <a href="https://www.facebook.com/" class="flex-nav__link"><i class="fa fa-facebook"></i></a>
-</li>
-<li class="social">
-    <a href="https://www.instagram.com" class="flex-nav__link"><i class="fa fa-instagram"></i></a>
-</li>
--->
-            </ul>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
     <!--MAIN PAGE BODY-->
     <!--1st level row-->
