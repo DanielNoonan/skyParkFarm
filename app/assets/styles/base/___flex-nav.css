@@ -1,0 +1,239 @@
+/*NOTE: need to include -- onmouseleave="closeSubMenus()" -- in the Top Tier (.flex-nav__has-sub-menu) <li> for that sub-menu, so that even if you click to open it, the sub-menu will still close when the mouse leaves*/
+
+.flex-nav-wrapper {
+    height: 140px;
+}
+
+
+/*Flex Container - Main*/
+
+.flex-nav {
+    border-top: 3px solid $spfBlue;
+    border-bottom: 3px solid $spfBlue;
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+    background: $dnwBlue;
+    align-items: center;
+    &__link {
+        background: $dnwBlue;
+        color: $spfGold;
+        font-weight: 700;
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+        text-decoration: none;
+        padding: 30px 5px;
+        border-radius: 5%;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        transition: all 0.1s;
+    }
+    &__link:hover {
+        color: white;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    &__brand-div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        padding: 0;
+        margin: 5px 0;
+        height: 130px;
+        background: transparent;
+        img {
+            height: 100%;
+            min-width: 130px;
+        }
+    }
+    &__title {
+        /*        padding-right: 20px;*/
+        font-size: 3.5rem;
+        /*            padding-top: 10%;*/
+        /*        text-align: center;*/
+        color: $spfGold;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+    &__ul-level-1 {
+        z-index: 999;
+        flex: 2;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 1000px;
+        align-items: center;
+        background: $dnwBlue;
+    }
+    &__has-sub-menu {
+        /*    *Need position:relative so can make ul-level-2 position absolute**/
+        position: relative;
+    }
+    &__ul-level-2 {
+        display: flex;
+        flex-direction: column;
+        /**Need position:absolute so it extends outside the nav-bar**/
+        position: absolute;
+        /*    right: 0;*/
+        background: $dnwBlue;
+        list-style-type: none;
+        padding: 0;
+        /*    margin-top: 12px;*/
+        min-width: 100%;
+        z-index: 10;
+        border: 1px solid white;
+        a {
+            color: silver;
+        }
+    }
+}
+
+
+/*Nav Bar Link Spacing*/
+
+.flex-nav li {
+    flex: 5;
+}
+
+.flex-nav .social {
+    flex: 1;
+}
+
+
+/**********************************************************************/
+
+
+/* Creates On-hover Dropdown Sub-menus for desktop view.
+Using the Adjancent Sibling Combinator selector '+' */
+
+@media all and (min-width: 1024px) {
+    .flex-nav__link:hover+ul {
+        display: block;
+    }
+    .flex-nav ul:hover {
+        display: flex;
+    }
+}
+
+
+/**********************************************************************/
+
+
+/*label styles and #toggle not displaying on larger screen sizes*/
+
+label {
+    font-size: 100px;
+    width: 100px;
+    margin: 10px 10px 0 0;
+    color: goldenrod;
+    display: none;
+}
+
+#toggle {
+    display: none;
+}
+
+
+/**********************************************************************/
+
+
+/**javaScript Adds & Removes this class to turn submenues ON/OFF**/
+
+.js-hide-sub-menu {
+    display: none;
+}
+
+
+/**********************************************************************/
+
+
+/**Makes navbar fixed position for larger screens**/
+
+@media all and (min-width:1024px) {
+    .flex-nav {
+        /*        z-index: 999;*/
+        width: 100%;
+        position: fixed;
+    }
+}
+
+
+/**********************************************************************/
+
+
+/*Responsive Changes For Smaller Screen Sizes*/
+
+@media all and (max-width: 1023px) {
+    .flex-nav {
+        flex-wrap: wrap;
+        &__brand-div {
+            display: flex;
+            justify-content: space-around;
+            flex-basis: 100%;
+        }
+        &__ul-level-1 {
+            flex-wrap: wrap;
+        }
+        a {
+            font-size: 2.5rem;
+            border-radius: 0%;
+        }
+        &__link:hover {
+            color: white;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        li {
+            flex: 1 1 100%;
+        }
+    }
+    /********************************/
+    /*Hamburger Toggle Functionality*/
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .toggle-me {
+        display: none;
+    }
+    #toggle:checked+.toggle-me {
+        /*Needs to display Block FIRST so menu appears*/
+        display: block;
+        /*THEN display flex so all the flex rules apply*/
+        display: flex;
+    }
+}
+
+
+/**Reducing the Title font size within this specific screen size range**/
+
+
+/*
+@media all and (min-width: 1024px) and (max-width: 1130px) {
+    .flex-nav {
+        &__title {
+            margin: 0;
+            font-size: 2rem;
+        }
+    }
+}
+*/
+
+
+/*Hide Title On Very Small Screens*/
+
+@media all and (max-width: 640px) {
+    .flex-nav {
+        &__title {
+            display: none;
+        }
+    }
+}

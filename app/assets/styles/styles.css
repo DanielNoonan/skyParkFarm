@@ -5,7 +5,7 @@
 @import 'base/_variables';
 @import 'base/_flex-grid';
 @import 'base/_global';
-@import 'base/_flex-nav';
+@import 'base/_flexnav';
 @import 'modules/_hero';
 @import 'modules/_news-column';
 @import 'modules/_page-title';

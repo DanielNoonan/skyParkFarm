@@ -1,0 +1,254 @@
+/******************COMMENT BLOCK FOR SEPARATION IN COMPILED CSS DOC******************/
+
+
+/************************************************************************************/
+
+
+/***********************************FLEXNAV******************************************/
+
+
+/************************************************************************************/
+
+
+/************************************************************************************/
+
+.flexnav__wrapper {
+    height: 145px;
+    @media (min-width: 1024px) and (max-width: 1144px) {
+        height: 190px;
+    }
+}
+
+.flexnav {
+    position: relative;
+    z-index: 999;
+    width: 100%;
+    background: $dnwBlue;
+    border-top: 3px solid $spfBlue;
+    border-bottom: 3px solid $spfBlue;
+    align-items: center;
+    justify-content: space-around;
+    @mixin atLarge {
+        position: fixed;
+    }
+    li {
+        list-style: none;
+        min-width: 150px;
+    }
+    &__toptab-p {
+        color: $spfGold;
+        font-size: 3rem;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin: 0;
+        cursor: pointer;
+        @mixin atLarge {
+            font-size: 1.6rem;
+        padding: 20px 5px;
+        }
+    }
+    &__toptab-p:hover {
+        color: white;
+    }
+    &__link {
+        width: 100%;
+        display: inline-block;
+        color: silver;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+        /*border-radius: 5%;*/
+        transition: all 0.3s;
+        @mixin atLarge {
+            font-size: 1.6rem;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+    }
+    &__link:hover {
+        @mixin atLarge {
+            color: white;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    /*a {
+        width: 100%;
+        display: inline-block;
+        color: silver;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+        border-radius: 5%;
+        transition: all 0.3s;
+        @mixin atLarge {
+            font-size: 1.6rem;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+    }*/
+
+    /*a:hover {
+        @mixin atLarge {
+            color: white;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }*/
+    &__hometab {
+        color: $spfGold;
+    }
+    &__logo {
+        display: none;
+        margin: 5px 0;
+        width: 130px;
+        /*align-self: flex-start;*****needed????*******************/
+        @mixin atLarge {
+            display: block;
+        }
+        &--submenu {
+            margin: 5px 0;
+            width: 130px;
+            @mixin atLarge {
+                display: none;
+            }
+        }
+    }
+    &__title {
+        font-size: 4rem;
+        display: none;
+        margin: 0;
+        /*        min-width: 255px;*/
+        color: $spfGold;
+        /*        media query to fix bug in mobile view navbar where it collapses into itself between a small specific screen size when the submenu is showing*/
+        /*
+        @media all and (min-width: 475px) {
+            display: inline-block;
+        }
+*/
+        &-wrapper {
+            /*text-align: center;*/
+            justify-content: space-around;
+            align-items: center;
+        }
+        &-bottom-border {
+            top: 140px;
+            left: 0px;
+            position: absolute;
+            height: 0;
+            width: 100%;
+            border-top: 3px solid $spfBlue;
+            @mixin atLarge {
+                display: none;
+            }
+        }
+        @mixin atSmall {
+            display: inline-block;
+        }
+        @mixin atLarge {
+            font-size: 6rem;
+            margin-right: 14%;
+        }
+    }
+    &__toptab-ul {
+        z-index: 1;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background-color: $dnwBlue;
+        /*border-top: 3px solid $spfBlue;*/
+        /*        flex-grow: 1;*/
+        padding: 0;
+        margin: 0;
+       /* li {
+            border: 1px solid grey;
+                        padding: 5px 0 5px 0;
+        }*/
+        @mixin atLarge {
+            border-top: none;
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            justify-content: space-around;
+            flex: 1;
+            /*            flex: 1 5 550px;*/
+            li {
+                border: none;
+            }
+        }
+    }
+    &__toptab-li {
+        /*        display: inline-block;*/
+        /*height: auto;*/
+        /*position: relative;*/
+    }
+    &__submenu {
+        display: none;
+        border: 1px solid white;
+        background: $dnwBlue;
+        /*padding-left: 0;*/
+        padding: 0;
+        li {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            @mixin atLarge {
+                padding: 20px 5px;
+            }
+        }
+        @mixin atLarge {
+            position: absolute;
+            padding: 0;
+        }
+    }
+    &__toggler {
+        margin: 0;
+        display: inline-block;
+        color: $spfGold;
+        font-size: 10rem;
+        cursor: pointer;
+        @mixin atLarge {
+            display: none;
+        }
+    }
+}
+
+
+/* Creates On-hover Dropdown Sub-menus for desktop view.
+Using the Adjancent Sibling Combinator selector '+' */
+
+
+/* Works on mobiles with touch and 'stylus hover' */
+
+
+@media all and (min-width: 1024px) {
+
+.flexnav__toptab-p:hover+ul {
+    display: block;
+}
+
+.flexnav__submenu:hover {
+    display: block;
+}
+
+
+}
+
+
+/*Class toggled to 'flexnav__toptab-ul' by javascript when the dropdown 'toggler' is clicked*/
+
+.js--mobile-nav-revealer {
+    display: flex;
+}
+
+
+/*Class toggled to 'flexnav__submenu' by javascript when the 'flexnav__toptab-p' is clicked*/
+
+.js--submenu-revealer {
+    display: block;
+}

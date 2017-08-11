@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Sky Park Farm</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=800" />
     <link rel="stylesheet" type="text/css" href="temp/styles/styles.css" media="screen">
     <link rel="stylesheet" type="text/css" href="temp/styles/print.css" media="print">
@@ -11,83 +12,119 @@
 
 <body>
     <!--    Nav-bar-->
-    <div class="flex-nav-wrapper">
-        <nav class="flex-nav">
-            <div class="flex-nav__brand-div">
-                <a href="#" class="flex-nav__logo">
-                    <img src="assets/images/BlueCircle%20Logo%20-%203.png">
-                </a>
-                <h1 class="flex-nav__title">SKY PARK FARM</h1>
-                <!--The LABEL is set so that it will effect the element with ID toggle - in this case a checkbox. So clicking this LABEL will activate that CHECKBOX-->
-                <!--                        <label for="toggle">&#9776;</label>-->
-                <label for="toggle">&#43;</label>
+
+    <!-- FLEXNAV 2.0 BELOW -->
+    <!-- FLEXNAV 2.0 BELOW -->
+    <!-- FLEXNAV 2.0 BELOW -->
+    <!-- FLEXNAV 2.0 BELOW -->
+
+    <nav class="flexnav__wrapper">
+        <div class="row flexnav">
+            <!--logo img here for large screens -->
+            <a href="index.html" class="flexnav__logo"><img src="assets/images/BlueCircle%20Logo%20-%203.png" alt="Logo"></a>
+            <div class="small-10"><!--this keeps the logo on the left-->
+                <div class="row small-12 flexnav__title-wrapper">
+                        <!--logo img here when mobile screens -->
+                    <a href="index.html" class="flexnav__logo--submenu"><img src="assets/images/BlueCircle%20Logo%20-%203.png" alt="Logo"></a>
+                    <h1 class="flexnav__title">SKY PARK FARM</h1>
+                    <p class="flexnav__toggler">&#43;</p>
+                </div>
+                <div class="flexnav__title-bottom-border"></div><!--fakes a 100% width bottom border for the title on smaller screens-->
+                <div class="small-12">
+                    <ul class="row small-12 flexnav__toptab-ul">
+                        <li class="flexnav__toptab-li js--has-submenu js--flexnav__toptab-li">
+                            <p class="flexnav__toptab-p">ABOUT US</p>
+                            <ul class="flexnav__submenu js--flexnav__submenu">
+                                <li>
+                                    <a class="flexnav__link" href="#">THE FUTURE</a>
+                                </li>
+                                <li>
+                                    <a class="flexnav__link" href="#">TODAY</a>
+                                </li>
+                                <li>
+                                    <a class="flexnav__link" href="about-history.html">HISTORY</a>
+                                </li>
+                                <li>
+                                    <a class="flexnav__link" href="#">THEN &amp; NOW</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="flexnav__toptab-li js--has-submenu js--flexnav__toptab-li"">
+                            <p class="flexnav__toptab-p">NEWS</p>
+                            <ul class="flexnav__submenu js--flexnav__submenu">
+                                <li>
+                                    <a class="flexnav__link" href="#">ARCHIVE</a>
+                                </li>
+                                <li>
+                                    <a class="flexnav__link" href="#">PRESS COVERAGE</a>
+                                </li>
+                                <li>
+                                    <a class="flexnav__link" href="#">PHOTO GALLERY</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="flexnav__toptab-li js--has-submenu js--flexnav__toptab-li">
+                            <p class="flexnav__toptab-p">THE TEAM</p>
+                            <ul class="flexnav__submenu js--flexnav__submenu">
+                                <li>
+                                    <a class="flexnav__link" href="#">THE OWNERS</a>
+                                </li>
+                                <li>
+                                    <a class="flexnav__link" href="#">ESTATE MANAGER</a>
+                                </li>
+                                <li>
+                                    <a class="flexnav__link" href="#">RANGER</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="flexnav__toptab-li js--has-submenu js--flexnav__toptab-li">
+                            <p class="flexnav__toptab-p">DEER FARM</p>
+                            <ul class="flexnav__submenu js--flexnav__submenu">
+                                <li>
+                                    <a class="flexnav__link" href="#">HOW IT WORKS</a>
+                                </li>
+                                <li>
+                                    <a class="flexnav__link" href="red-deer.html">RED DEER</a>
+                                </li>
+                                <li>
+                                    <a class="flexnav__link" href="#">VENISON &amp; HEALTH</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="flexnav__toptab-li js--has-submenu js--flexnav__toptab-li">
+                            <p class="flexnav__toptab-p">ACCOMMODATION</p>
+                            <ul class="flexnav__submenu js--flexnav__submenu">
+                                <li>
+                                    <a class="flexnav__link" href="#">QUEBEC COTTAGE</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="flexnav__toptab-li js--has-submenu js--flexnav__toptab-li">
+                            <p class="flexnav__toptab-p">CONTACT</p>
+                            <ul class="flexnav__submenu js--flexnav__submenu">
+                                <li>
+                                    <a class="flexnav__link" href="#">MAP &amp; EMAIL</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                       <!--  <li class="social">
+                            <a href="https://twitter.com" class="flex-nav__link"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="social">
+                            <a href="https://www.facebook.com/" class="flex-nav__link"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="social">
+                            <a href="https://www.instagram.com" class="flex-nav__link"><i class="fa fa-instagram"></i></a>
+                        </li> -->
+                        
+                    </ul>
+                </div>
             </div>
-            <input type="checkbox" id="toggle">
-            <ul class="js__click-outside-to-close toggle-me flex-nav__ul-level-1">
-                <!--
-<li class="js-top-tier">
-    <a href="#" class="flex-nav__link">HOME</a>
-</li>
--->
-                <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
-                    <a class="flex-nav__link">ABOUT US</a>
-                    <ul class="flex-nav__ul-level-2 js-hide-sub-menu" onmouseleave="closeSubMenus()">
-                        <li><a href="#" class="flex-nav__link">THE FUTURE</a></li>
-                        <li><a href="#" class="flex-nav__link">TODAY</a></li>
-                        <li><a href="about-history.html" class="flex-nav__link">HISTORY</a></li>
-                        <li><a href="#" class="flex-nav__link">THEN &amp; NOW</a></li>
-                    </ul>
-                </li>
-                <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
-                    <a class="flex-nav__link">NEWS</a>
-                    <ul class="flex-nav__ul-level-2 js-hide-sub-menu">
-                        <li><a href="#" class="flex-nav__link">LATEST</a></li>
-                        <li><a href="#" class="flex-nav__link">PRESS COVERAGE</a></li>
-                        <li><a href="#" class="flex-nav__link">PHOTO GALLERY</a></li>
-                    </ul>
-                </li>
-                <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
-                    <a href="#" class="flex-nav__link">THE TEAM</a>
-                    <ul class="flex-nav__ul-level-2 js-hide-sub-menu">
-                        <li><a href="#" class="flex-nav__link">THE OWNERS</a></li>
-                        <li><a href="#" class="flex-nav__link">ESTATE MANAGER</a></li>
-                        <li><a href="#" class="flex-nav__link">RANGER</a></li>
-                    </ul>
-                </li>
-                <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
-                    <a href="#" class="flex-nav__link">DEER FARM</a>
-                    <ul class="flex-nav__ul-level-2 js-hide-sub-menu">
-                        <li><a href="#" class="flex-nav__link">HOW IT WORKS</a></li>
-                        <li><a href="#" class="flex-nav__link">RED DEER</a></li>
-                        <li><a href="#" class="flex-nav__link">VENISON &amp; HEALTH</a></li>
-                    </ul>
-                </li>
-                <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
-                    <a href="#" class="flex-nav__link">ACCOMMODATION</a>
-                    <ul class="flex-nav__ul-level-2 js-hide-sub-menu">
-                        <li><a href="#" class="flex-nav__link">QUEBEC COTTAGE</a></li>
-                    </ul>
-                </li>
-                <li onmouseleave="closeSubMenus()" class="js-top-tier flex-nav__has-sub-menu" style="cursor: pointer">
-                    <a href="#" class="flex-nav__link">CONTACT</a>
-                    <ul class="flex-nav__ul-level-2 js-hide-sub-menu">
-                        <li><a href="#" class="flex-nav__link">MAP &amp; EMAILS</a></li>
-                    </ul>
-                </li>
-                <!--
-<li class="social">
-    <a href="https://twitter.com" class="flex-nav__link"><i class="fa fa-twitter"></i></a>
-</li>
-<li class="social">
-    <a href="https://www.facebook.com/" class="flex-nav__link"><i class="fa fa-facebook"></i></a>
-</li>
-<li class="social">
-    <a href="https://www.instagram.com" class="flex-nav__link"><i class="fa fa-instagram"></i></a>
-</li>
--->
-            </ul>
-        </nav>
-    </div>
+        </div>
+    </nav>
+
+
 
     <!--Hero Section-->
     <div class="large-hero-wrapper">
@@ -121,9 +158,11 @@
 
                 <!--1st News Item-->
                 <div class="small-12 news-column__content-item">
-                    <h1 class="news-column__content-title">Sample Title</h1>
-                    <img class="news-column__image" srcset="assets/images/deer-grazing-lensflare-SMALL.jpg 640w, assets/images/deer-grazing-lensflare-MEDIUM.jpg 1200w, assets/images/deer-grazing-lensflare-LARGE.jpg 1920w" alt="Red Deer grazing in sun rays">
-                    <p class="news-column__intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h1 class="news-column__content-title">PETERSFIELD TIMES</h1>
+                    <img class="news-column__image" src="assets/images/races.jpg" alt="One of the 'races' at Sky Park Farm">
+                    <p class="news-column__intro-text">
+                        The Petersfield Times prints local interest article on Sky Park Farm...
+                    </p>
                     <a href="#/" class="news-column__button modal-button--open">Read More</a>
                     <!--The / in the href="#/" in the above <a> prevents the page from scrolling to the top of the page when it is clicked-->
                 </div>
@@ -377,21 +416,25 @@
             <div class="small-11 modal__content-box">
                 <div class="row">
                     <button class="noprint modal__print-button">Print Content</button>
-                    <h1 class="small-12 modal__title">Sample Title - News Article With Image</h1>
+                    <h1 class="small-12 modal__title">Farm hopes to hard surface 'races' so deer can feed easily</h1>
                     <div class="small-12 large-4 modal__column">
-                        <img srcset="assets/images/deer-grazing-lensflare-SMALL.jpg 640w, assets/images/deer-grazing-lensflare-MEDIUM.jpg 1200w, assets/images/deer-grazing-lensflare-LARGE.jpg 1920w" alt="Red Deer grazing in sun rays" class="modal__image">
-                        <h2>Sample Picture Text - picture of a Red Deer on the run</h2>
-                        <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <img class="modal__image" src='assets/images/races.jpg' alt="Picture of one of the 'races' at Sky Park Farm" ">
+                        <h1>One of the 'races' at Sky Park Farm</h1>
                     </div>
                     <div class="small-12 large-4 modal__column">
-                        <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
-
-                        <h2 class="modal__sub-title">Sub-title Text - New Heading For The Following Text</h2>
-                        <p class="modal__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p class="modal__text">
+                            A DEER farm near West Harting has applied to hard surface farm tracks to allow deer to move freely.<br><br>
+                            Owners of Sky Park Farm on the Harting to Rogate road plan to hard surface tracks or 'races' between feeding meadows to ease the movement of deer between them.<br><br>
+                            At the moment there are about 100 red deer on the farm, but in time that number is expected to double, says joint farm owner Pierce Noonan.<br><br>
+                            In plans with the South Downs National Park Authority (SDNPA), it says that last winter the races became waterlogged and churned up, causing problems for the deer, and the movement of farm vehicles.
+                        </p><br>
                     </div>
                     <div class="small-12 large-4 modal__column">
-                        <h2 class="modal__sub-title">Sub-title Text - New Heading For The Following Text</h2>
-                        <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p class="modal__text">
+                            It also says the type of compacted surfacing being proposed is a mix of sand, gravel and clay called 'hoggin', which is available from a quarry over the road from the farm.<br><br>
+                            The farm has a contract to supply venison to Waitrose. The plans can be viewed on the website at:<br><br>
+                            <a href="http://www.southdowns.gov.uk/planning" target="blank">www.southdowns.gov.uk/planning</a>
+                        </p>
                     </div>
                 </div>
             </div>
