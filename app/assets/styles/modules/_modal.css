@@ -14,7 +14,8 @@
     }
     &__content-box {
         background-color: $backGrey;
-        height: 80vh;
+        margin-top: 50px;
+        height: 85vh;/**originally set at 80**/
         text-align: center;
         overflow: auto;
     }
