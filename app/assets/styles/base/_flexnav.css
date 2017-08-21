@@ -133,8 +133,8 @@
         }
 */
         &-wrapper {
-            /*text-align: center;*/
-            justify-content: space-around;
+            /*justify-content: space-around; to center title*/
+            justify-content: space-between;
             align-items: center;
         }
         &-bottom-border {
@@ -153,7 +153,8 @@
         }
         @mixin atLarge {
             font-size: 6rem;
-            margin-right: 14%;
+            margin-left: 5%;
+            /*margin-right: 14%; to center title*/
         }
     }
     &__toptab-ul {

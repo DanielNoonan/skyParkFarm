@@ -939,9 +939,10 @@ a:hover {
 */
 
 .flexnav__title-wrapper {
-            /*text-align: center;*/
-            -ms-flex-pack: distribute;
-                justify-content: space-around;
+            /*justify-content: space-around; to center title*/
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             -webkit-box-align: center;
                 -ms-flex-align: center;
                     align-items: center;
@@ -976,7 +977,8 @@ a:hover {
 
 .flexnav__title {
             font-size: 6rem;
-            margin-right: 14%
+            margin-left: 5%
+            /*margin-right: 14%; to center title*/
     }
     }
 
