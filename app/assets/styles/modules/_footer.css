@@ -3,9 +3,10 @@
     margin-left: 1%;
     margin-right: 1%;
 */
-    margin-top: 10px;
+    border-top: 2px solid $spfBlue;
+    margin-top: 50px;
     justify-content: space-around;
-    background: $backGrey;
+    background: $dnwBlue;
     &__section {
         text-align: center;
     }

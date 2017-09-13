@@ -1351,10 +1351,11 @@ Using the Adjancent Sibling Combinator selector '+' */
     margin-left: 1%;
     margin-right: 1%;
 */
-    margin-top: 10px;
+    border-top: 2px solid #80D4F7;
+    margin-top: 50px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    background: #F6F6F6;
+    background: #000034;
 }
 
 .footer__section {
