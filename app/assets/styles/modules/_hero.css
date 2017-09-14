@@ -3,5 +3,5 @@
     @mixin atLarge {
         display: block;
     }
-    background: $spfBlue;
+/*    background: $spfBlue;*/
 }

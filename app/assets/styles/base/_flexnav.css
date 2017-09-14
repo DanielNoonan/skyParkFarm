@@ -24,7 +24,7 @@
     z-index: 999;
     width: 100%;
     background: $dnwBlue;
-    border-top: 3px solid $spfBlue;
+    border-top: 2px solid $spfBlue;
     border-bottom: 3px solid $spfBlue;
     align-items: center;
     justify-content: space-around;
