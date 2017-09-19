@@ -15,7 +15,7 @@ html {
 body {
     font-family: 'Garamond', serif;
     @mixin atLarge {
-        background-color: $backGrey;
+        background-color: white;
     }
 }
 

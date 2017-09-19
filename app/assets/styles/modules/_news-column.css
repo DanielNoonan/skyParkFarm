@@ -14,14 +14,18 @@
     &__main-title {
         color: $spfGold;
         font-size: 2.9rem;
-        text-decoration: underline;
+/*        text-decoration: underline;*/
     }
     &__content-box {
 /*        border: 1px solid $spfBlue;*/
-        background: $backGrey;
+        border-radius: 3%;
+        background: white;
     }
     &__content-item {
-/*        border-bottom: 1px solid $spfBlue;*/
+        border-radius: 3%;
+        margin-bottom: 5px;
+        background: white;
+        border: 1px solid $spfBlue;
         padding: 0 1rem;
     }
     &__content-title {
@@ -34,23 +38,24 @@
         font-size: 2.5rem;
     }
     &__button {
-        background: $backGrey;
-        color: $textGrey;
+        background: $spfGold;
+        color: silver;
         font-weight: 700;
         font-size: 2rem;
         letter-spacing: 2px;
         text-decoration: none;
         padding-top: 10px;
         padding-bottom: 10px;
-        border-radius: 5%;
+        border-radius: 15%;
         display: inline-block;
-        width: 40%;
+/*        width: 35%;*/
+        width: 120px;
         margin-bottom: 2rem;
         transition: all 0.2s;
         &:hover {
-            color: $spfGold;
-            background: $dnwBlue;
-            border: 3px solid $spfBlue;
+            color: white;
+/*            background: $dnwBlue;*/
+/*            border: 3px solid $spfBlue;*/
         }
         /*Farm App Changed - previously nothing*/
     @media print {

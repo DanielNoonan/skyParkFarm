@@ -22,6 +22,7 @@
         justify-content: space-around;
     }
     &__inner-row {
+        border-radius: 15px;
         margin-top: 10px;
         @mixin atLarge {
             margin-top: 0;
