@@ -1153,7 +1153,14 @@ Using the Adjancent Sibling Combinator selector '+' */
         background: white;
         border: 1px solid #80D4F7;
         padding: 0 1rem;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
     }
+
+.news-column__content-item:hover {
+            border: 1px solid #960935;
+            cursor: pointer;
+        }
 
 .news-column__content-title {
         font-size: 3rem;

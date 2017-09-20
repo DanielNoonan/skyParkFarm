@@ -27,6 +27,11 @@
         background: white;
         border: 1px solid $spfBlue;
         padding: 0 1rem;
+        transition: all 0.2s;
+        &:hover {
+            border: 1px solid #960935;
+            cursor: pointer;
+        }
     }
     &__content-title {
         font-size: 3rem;
