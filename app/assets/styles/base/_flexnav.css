@@ -46,7 +46,7 @@
         cursor: pointer;
         @mixin atLarge {
             font-size: 1.6rem;
-        padding: 20px 5px;
+        padding: 10px 5px;
         }
     }
     &__toptab-p:hover {

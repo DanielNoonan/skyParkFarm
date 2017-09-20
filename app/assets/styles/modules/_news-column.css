@@ -4,16 +4,23 @@
     height: 100vh;
     color: $textGrey;
     &__main-title-box {
-        background: $backGrey;
-/*        border: 1px solid $spfBlue;*/
+/*        border-radius: 10px;*/
+        background: white;
 /*        padding-top: 1px;don't need this if have the border activated*/
 /*        padding-bottom: 1px;don't need this if have the border activated*/
-        margin-bottom: 10px;
-        font-size: 2rem;
+/*        margin-bottom: 10px;*/
+        h1 {
+/*            margin: 6px 0 2px 0;*/
+            padding-top: 3px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            border: 1px solid $spfBlue;
+            border-radius: 10px;
+        }
     }
     &__main-title {
         color: $spfGold;
-        font-size: 2.9rem;
+        font-size: 3rem;
 /*        text-decoration: underline;*/
     }
     &__content-box {
@@ -31,16 +38,19 @@
         &:hover {
             border: 1px solid #960935;
             cursor: pointer;
+            color: #960935;
+            background: $backGrey;
         }
     }
     &__content-title {
-        font-size: 3rem;
+        font-size: 2.2rem;
+        color: $textGrey;
     }
     &__image {
         border-radius: 3%;
     }
     &__intro-text {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     &__button {
         background: $spfGold;
