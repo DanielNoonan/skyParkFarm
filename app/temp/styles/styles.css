@@ -1389,8 +1389,9 @@ Using the Adjancent Sibling Combinator selector '+' */
     margin-top: 10px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    background: #F6F6F6;
 }
+
+/* background: $backGrey; */
 
 .footer__section {
         text-align: center;
@@ -1406,6 +1407,30 @@ Using the Adjancent Sibling Combinator selector '+' */
 
 .footer__item {
         color: #BC7817;
+    }
+
+.footer__logo-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        /* border: 2px solid black; */
+    }
+
+.footer__logo {
+        max-width: 20%;
+    }
+
+@media (min-width: 1024px) {
+
+.footer__logo {
+            max-width: 100%
+    }
     }
 
 .modal {

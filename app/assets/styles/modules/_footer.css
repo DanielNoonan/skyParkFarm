@@ -6,7 +6,7 @@
 */
     margin-top: 10px;
     justify-content: space-around;
-    background: $backGrey;
+    /* background: $backGrey; */
     &__section {
         text-align: center;
     }
@@ -19,5 +19,17 @@
     }
     &__item {
         color: $spfGold;
+    }
+    &__logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: 2px solid black; */
+    }
+    &__logo {
+        max-width: 20%;
+        @mixin atLarge {
+            max-width: 100%;
+        }
     }
 }
